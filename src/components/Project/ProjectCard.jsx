@@ -2,7 +2,7 @@ export default function ProjectCard({ project, handleClick, showDetail }) {
 	return (
 		<>
 			{!showDetail && (
-				<div className='card' style={{ width: '18rem' }}>
+				<div className='card projectCard'>
 					<div className='card-body'>
             <img src={project.image} className="card-img" alt={'This is the image of the project :' + project.title} />
 						<h3 className='card-title'>{project.title}</h3>

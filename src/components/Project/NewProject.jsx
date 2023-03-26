@@ -1,7 +1,37 @@
-export default function NewProject() {
-    
+import { useState } from 'react';
+import ProjectsService from '../../services/projects.service';
+
+export default function NewProject({ setIsCreated, isCreated, handleNewProject, newProject }) {
+	const [form, setForm] = useState({
+		title: '',
+		description: '',
+		technologies: '',
+		urlGit: '',
+		image: '',
+		ownCode: '',
+	});
+
+	const projectService = new ProjectsService();
+	
+	const submitHandler = (e) => {
+		e.preventDefault();
+		projectService.addProject({
+			title: form.title,
+			description: form.description,
+			technologies: form.technologies,
+			urlGit: form.urlGit,
+			image: form.image,
+			ownCode: form.ownCode
+		})
+		.then(result => {
+			setIsCreated(!isCreated);
+			handleNewProject(!newProject)
+		})
+		.catch(err => console.log(err))
+	};
+
 	return (
-		<form id='newProject'>
+		<form id='newProject' onSubmit={submitHandler}>
 			<div className='alert alert-primary d-flex align-items-center' role='alert'>
 				<svg
 					xmlns='http://www.w3.org/2000/svg'
@@ -20,6 +50,8 @@ export default function NewProject() {
 					className='form-control'
 					id='title'
 					placeholder='name@example.com'
+					value={form.title}
+					onChange={(e) => setForm({ ...form, title: e.target.value })}
 				/>
 				<label htmlFor='title'>Project title</label>
 			</div>
@@ -29,6 +61,8 @@ export default function NewProject() {
 					className='form-control'
 					id='description'
 					placeholder='name@example.com'
+					value={form.description}
+					onChange={(e) => setForm({ ...form, description: e.target.value })}
 				/>
 				<label htmlFor='description'>Description</label>
 			</div>
@@ -38,6 +72,8 @@ export default function NewProject() {
 					className='form-control'
 					id='technologies'
 					placeholder='name@example.com'
+					value={form.technologies}
+					onChange={(e) => setForm({ ...form, technologies: e.target.value })}
 				/>
 				<label htmlFor='technologies'>Technologies</label>
 			</div>
@@ -47,8 +83,16 @@ export default function NewProject() {
 					className='form-control'
 					id='urlGit'
 					placeholder='name@example.com'
+					value={form.urlGit}
+					onChange={(e) => setForm({ ...form, urlGit: e.target.value })}
 				/>
 				<label htmlFor='urlGit'>Link to GitHub</label>
+			</div>
+			<div className='mb-3'>
+				<label htmlFor='formFile' className='form-label'>
+					Select image
+				</label>
+				<input className='form-control' type='file' id='formFile' />
 			</div>
 			<div className='form-floating mb-3'>
 				<input
@@ -56,9 +100,14 @@ export default function NewProject() {
 					className='form-control'
 					id='ownerCode'
 					placeholder='name@example.com'
+					value={form.ownCode}
+					onChange={(e) => setForm({ ...form, ownCode: e.target.value })}
 				/>
 				<label htmlFor='ownerCode'>Owner Code</label>
 			</div>
+			<button type='submit' className='btn btn-primary'>
+				Create new Project
+			</button>
 		</form>
 	);
 }

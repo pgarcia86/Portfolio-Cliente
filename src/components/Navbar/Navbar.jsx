@@ -1,4 +1,7 @@
-export default function Navbar({ handleNewProject, newProject }) {
+import {Link} from "react-router-dom"
+
+export default function Navbar({ handleNewProject, newProject, setDetails }) {
+
 	return (
 		<nav className='navbar navbar-expand-lg bg-body-tertiary'>
 			<div className='container-fluid'>
@@ -37,7 +40,7 @@ export default function Navbar({ handleNewProject, newProject }) {
 					</ul>
 					<ul className='navbar-nav linkedIn'>
 						<li>
-							<p className='nav-link'> LinkedIn</p>
+							<Link to={"https://www.linkedin.com/in/eogimenez/"} className='nav-link'>LinkedIn</Link>
 						</li>
 					</ul>
 				</div>

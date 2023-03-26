@@ -13,6 +13,7 @@ function App() {
 	const [project, setProject] = useState('');
 	const [newProject, setNewProject] = useState(false);
 	const [details, setDetails] = useState('app');
+	const [isCreated, setIsCreated] = useState(false);
 	const projectService = new ProjectsService();
 
 	const handleClick = (showDetail, project) => {
@@ -23,11 +24,13 @@ function App() {
 
 	const handleNewProject = (newProject) => {
 		setNewProject(newProject);
+		if (newProject === true && details === 'app') setDetails('projectDetail');
+		if (newProject === false && showDetail === false) setDetails('app');
 	};
 
 	useEffect(() => {
 		getProjects();
-	}, []);
+	}, [isCreated]);
 
 	return (
 		<>
@@ -46,7 +49,14 @@ function App() {
 				{showDetail && !newProject && (
 					<ProjectDetail project={project} handleClick={handleClick} showDetail={showDetail} />
 				)}
-				{newProject && <NewProject />}
+				{newProject && (
+					<NewProject
+						setIsCreated={setIsCreated}
+						isCreated={isCreated}
+						handleNewProject={handleNewProject}
+						newProject={newProject}
+					/>
+				)}
 			</div>
 		</>
 	);
