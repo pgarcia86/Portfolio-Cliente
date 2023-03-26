@@ -13,8 +13,7 @@ function App() {
 	const [project, setProject] = useState('');
 	const [newProject, setNewProject] = useState(false);
 	const [details, setDetails] = useState('app');
-	const [isCreated, setIsCreated] = useState(false);
-	const projectService = new ProjectsService();
+	const [somethingChange, SetSomethingChange] = useState(false);
 
 	const handleClick = (showDetail, project) => {
 		setShowDetail(showDetail);
@@ -30,8 +29,9 @@ function App() {
 
 	useEffect(() => {
 		getProjects();
-	}, [isCreated]);
+	}, [somethingChange]);
 
+	console.log(projects)
 	return (
 		<>
 			<Navbar handleNewProject={handleNewProject} newProject={newProject} />
@@ -47,12 +47,18 @@ function App() {
 						/>
 					))}
 				{showDetail && !newProject && (
-					<ProjectDetail project={project} handleClick={handleClick} showDetail={showDetail} />
+					<ProjectDetail
+						project={project}
+						handleClick={handleClick}
+						showDetail={showDetail}
+						SetSomethingChange={SetSomethingChange}
+						somethingChange={somethingChange}
+					/>
 				)}
 				{newProject && (
 					<NewProject
-						setIsCreated={setIsCreated}
-						isCreated={isCreated}
+						SetSomethingChange={SetSomethingChange}
+						somethingChange={somethingChange}
 						handleNewProject={handleNewProject}
 						newProject={newProject}
 					/>

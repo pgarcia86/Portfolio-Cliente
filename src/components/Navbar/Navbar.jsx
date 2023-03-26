@@ -1,6 +1,6 @@
 import {Link} from "react-router-dom"
 
-export default function Navbar({ handleNewProject, newProject, setDetails }) {
+export default function Navbar({ handleNewProject, newProject }) {
 
 	return (
 		<nav className='navbar navbar-expand-lg bg-body-tertiary'>
@@ -19,11 +19,11 @@ export default function Navbar({ handleNewProject, newProject, setDetails }) {
 				</button>
 				<div className='collapse navbar-collapse displ' id='navbarNav'>
 					<ul className='navbar-nav'>
-						<li className='nav-item'>
+						{/* <li className='nav-item'>
 							<p className='nav-link' aria-current='page'>
 								Home
 							</p>
-						</li>
+						</li> */}
 						<li className='nav-item'>
 							<p
 								onClick={() => {
@@ -34,9 +34,9 @@ export default function Navbar({ handleNewProject, newProject, setDetails }) {
 								New Project
 							</p>
 						</li>
-						<li className='nav-item'>
+					{/* 	<li className='nav-item'>
 							<p className='nav-link'>Filtrar</p>
-						</li>
+						</li> */}
 					</ul>
 					<ul className='navbar-nav linkedIn'>
 						<li>

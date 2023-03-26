@@ -44,4 +44,22 @@
 .cardDetail {
   width: 50em;
   height: 40em;
+  
+}
+
+.cardDetail > div {
+	margin: 1em 1em 0 1em;
+	padding: 0;
+}
+
+.imageCard {
+	height: 5em;
+	width: 6em;
+}
+
+.imageDetail {
+	height: 20em;
+	width: 20em;
+	margin: 0 1em 1em 1em;
+	;
 }

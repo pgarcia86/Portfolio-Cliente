@@ -1,18 +1,27 @@
 import { useState } from 'react';
 import ProjectsService from '../../services/projects.service';
 
-export default function NewProject({ setIsCreated, isCreated, handleNewProject, newProject }) {
+export default function NewProject({ SetSomethingChange, somethingChange, handleNewProject, newProject }) {
 	const [form, setForm] = useState({
 		title: '',
 		description: '',
 		technologies: '',
 		urlGit: '',
-		image: '',
 		ownCode: '',
 	});
+	const [image, setImage] = useState('')
 
 	const projectService = new ProjectsService();
 	
+	const handleFileUpload = (e) => {
+		const uploadData = new FormData();
+		uploadData.append('image', e.target.files[0])
+		projectService.uploadFile(uploadData)
+		.then(response => {
+			setImage(response.data.imageUrl)
+		})
+		.catch(err => console.log('Error while uploading the image: ', err))
+	}
 	const submitHandler = (e) => {
 		e.preventDefault();
 		projectService.addProject({
@@ -20,11 +29,11 @@ export default function NewProject({ setIsCreated, isCreated, handleNewProject, 
 			description: form.description,
 			technologies: form.technologies,
 			urlGit: form.urlGit,
-			image: form.image,
-			ownCode: form.ownCode
+			ownCode: form.ownCode,
+			image
 		})
 		.then(result => {
-			setIsCreated(!isCreated);
+			SetSomethingChange(!somethingChange);
 			handleNewProject(!newProject)
 		})
 		.catch(err => console.log(err))
@@ -92,7 +101,7 @@ export default function NewProject({ setIsCreated, isCreated, handleNewProject, 
 				<label htmlFor='formFile' className='form-label'>
 					Select image
 				</label>
-				<input className='form-control' type='file' id='formFile' />
+				<input className='form-control' type='file' id='formFile' onChange={(e) => {handleFileUpload(e)}} />
 			</div>
 			<div className='form-floating mb-3'>
 				<input

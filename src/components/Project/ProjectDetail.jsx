@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import ProjectsService from '../../services/projects.service';
 
-export default function ProjectDetail({ project, handleClick, showDetail }) {
+export default function ProjectDetail({ project, handleClick, showDetail,SetSomethingChange, somethingChange }) {
 	const [modal, setModal] = useState(false);
 	const [ownCode, setOwnCode] = useState('');
 	const projectService = new ProjectsService();
@@ -9,13 +9,14 @@ export default function ProjectDetail({ project, handleClick, showDetail }) {
 	const handleModal = () => {
 		setModal(true);
 	};
-	
+
 	const deleteHandler = (e) => {
 		e.preventDefault();
-		console.log(ownCode)
 		projectService
-			.deleteProject(project._id, ownCode)
+			.deleteProject(project._id, {ownCode: ownCode})
 			.then((result) => {
+				SetSomethingChange(!somethingChange)
+				setModal(!modal);
 				handleClick(!showDetail);
 			})
 			.catch((err) => console.log(err));
@@ -59,12 +60,10 @@ export default function ProjectDetail({ project, handleClick, showDetail }) {
 										/>
 										<label htmlFor='ownerCode'>Owner Code</label>
 									</div>
-								<button type='submit' className='btn btn-danger' data-bs-dismiss='modal'>
-									Delete
-								</button>
+									<button type='submit' className='btn btn-danger' data-bs-dismiss='modal'>
+										Delete
+									</button>
 								</form>
-							</div>
-							<div className='modal-footer'>
 							</div>
 						</div>
 					</div>
@@ -96,9 +95,10 @@ export default function ProjectDetail({ project, handleClick, showDetail }) {
 						</p>
 					</>
 				</div>
+				<hr/>
 				<img
 					src={project.image}
-					className='card-img-bottom'
+					className='card-img-bottom imageDetail'
 					alt={'This is the image of the project :' + project.title}
 				/>
 			</div>
