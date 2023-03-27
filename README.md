@@ -1,3 +1,3 @@
-# porfolio-client
+# portfolio-client
 
 WORK IN PROGRESS
