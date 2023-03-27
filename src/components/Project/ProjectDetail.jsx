@@ -1,7 +1,13 @@
 import { useState } from 'react';
 import ProjectsService from '../../services/projects.service';
 
-export default function ProjectDetail({ project, handleClick, showDetail,SetSomethingChange, somethingChange }) {
+export default function ProjectDetail({
+	project,
+	handleClick,
+	showDetail,
+	SetSomethingChange,
+	somethingChange,
+}) {
 	const [modal, setModal] = useState(false);
 	const [ownCode, setOwnCode] = useState('');
 	const projectService = new ProjectsService();
@@ -13,9 +19,9 @@ export default function ProjectDetail({ project, handleClick, showDetail,SetSome
 	const deleteHandler = (e) => {
 		e.preventDefault();
 		projectService
-			.deleteProject(project._id, {ownCode: ownCode})
+			.deleteProject(project._id, { ownCode: ownCode })
 			.then((result) => {
-				SetSomethingChange(!somethingChange)
+				SetSomethingChange(!somethingChange);
 				setModal(!modal);
 				handleClick(!showDetail);
 			})
@@ -27,17 +33,15 @@ export default function ProjectDetail({ project, handleClick, showDetail,SetSome
 			{modal && (
 				<div
 					className='modal fade'
-					id='staticBackdrop'
-					data-bs-backdrop='static'
-					data-bs-keyboard='false'
+					id='deleteModal'
 					tabIndex='-1'
-					aria-labelledby='staticBackdropLabel'
+					aria-labelledby='deleteModalLabel'
 					aria-hidden='true'
 				>
 					<div className='modal-dialog'>
 						<div className='modal-content'>
 							<div className='modal-header'>
-								<h1 className='modal-title fs-5' id='staticBackdropLabel'>
+								<h1 className='modal-title fs-5' id='deleteModalLabel'>
 									Delete this Project
 								</h1>
 								<button
@@ -60,8 +64,8 @@ export default function ProjectDetail({ project, handleClick, showDetail,SetSome
 										/>
 										<label htmlFor='ownerCode'>Owner Code</label>
 									</div>
-									<button type='submit' className='btn btn-danger' data-bs-dismiss='modal'>
-										Delete
+									<button type='submit' className='btn' data-bs-dismiss='modal'>
+										<i class='fa-solid fa-trash-can'></i>
 									</button>
 								</form>
 							</div>
@@ -76,26 +80,32 @@ export default function ProjectDetail({ project, handleClick, showDetail,SetSome
 					<p className='card-text'>
 						<small className='text-body-secondary'>{project.technologies}</small>
 					</p>
-					<>
+				</div>
+					<div className='iconos'>
 						<p
-							className='card-text'
+							className='card-text eachIcon'
 							onClick={() => {
 								handleClick(!showDetail);
 							}}
 						>
-							Volver al menu principal
+							<i class='fa-solid fa-arrow-left-long'></i>
+						</p>
+						<p className='card-text eachIcon'>
+							<i class='fa-solid fa-share-nodes'></i>
+						</p>
+						<p className='card-text eachIcon'>
+							<i class='fa-solid fa-pencil'></i>
 						</p>
 						<p
-							className='card-text'
+							className='card-text eachIcon'
 							data-bs-toggle='modal'
-							data-bs-target='#staticBackdrop'
+							data-bs-target='#deleteModal'
 							onClick={handleModal}
 						>
-							Delete this card
+							<i class='fa-solid fa-trash-can'></i>
 						</p>
-					</>
-				</div>
-				<hr/>
+					</div>
+				
 				<img
 					src={project.image}
 					className='card-img-bottom imageDetail'

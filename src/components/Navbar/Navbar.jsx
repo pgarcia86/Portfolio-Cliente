@@ -1,9 +1,8 @@
-import {Link} from "react-router-dom"
+import { Link } from 'react-router-dom';
 
 export default function Navbar({ handleNewProject, newProject }) {
-
 	return (
-		<nav className='navbar navbar-expand-lg bg-body-tertiary'>
+		<nav className='navbar navbar-expand-lg background '>
 			<div className='container-fluid'>
 				<p className='navbar-brand'>About me </p>
 				<button
@@ -29,18 +28,20 @@ export default function Navbar({ handleNewProject, newProject }) {
 								onClick={() => {
 									handleNewProject(!newProject);
 								}}
-								className='nav-link'
+								className='nav-link testing'
 							>
 								New Project
 							</p>
 						</li>
-					{/* 	<li className='nav-item'>
+						{/* 	<li className='nav-item'>
 							<p className='nav-link'>Filtrar</p>
 						</li> */}
 					</ul>
 					<ul className='navbar-nav linkedIn'>
 						<li>
-							<Link to={"https://www.linkedin.com/in/eogimenez/"} className='nav-link'>LinkedIn</Link>
+							<Link to={'https://www.linkedin.com/in/eogimenez/'} className='nav-link'>
+								<i class='fa-brands fa-linkedin'></i> LinkedIn
+							</Link>
 						</li>
 					</ul>
 				</div>

@@ -56,7 +56,7 @@ export default function NewProject({ SetSomethingChange, somethingChange, handle
 			<div className='form-floating mb-3'>
 				<input
 					type='text'
-					className='form-control'
+					className='form-control inputForm'
 					id='title'
 					placeholder='name@example.com'
 					value={form.title}
