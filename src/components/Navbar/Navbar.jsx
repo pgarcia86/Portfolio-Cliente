@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom';
 
 export default function Navbar({ handleNewProject, newProject }) {
 	return (
-		<nav className='navbar navbar-expand-lg background '>
-			<div className='container-fluid'>
+		<nav className='navbar navbar-dark navbar-expand-lg background'>
+			<div className='container-fluid '>
 				<p className='navbar-brand'>About me </p>
 				<button
 					className='navbar-toggler'
@@ -16,7 +16,7 @@ export default function Navbar({ handleNewProject, newProject }) {
 				>
 					<span className='navbar-toggler-icon'></span>
 				</button>
-				<div className='collapse navbar-collapse displ' id='navbarNav'>
+				<div className='collapse navbar-collapse navbar__display' id='navbarNav'>
 					<ul className='navbar-nav'>
 						{/* <li className='nav-item'>
 							<p className='nav-link' aria-current='page'>
@@ -28,7 +28,7 @@ export default function Navbar({ handleNewProject, newProject }) {
 								onClick={() => {
 									handleNewProject(!newProject);
 								}}
-								className='nav-link testing'
+								className='nav-link newProject'
 							>
 								New Project
 							</p>
@@ -40,7 +40,7 @@ export default function Navbar({ handleNewProject, newProject }) {
 					<ul className='navbar-nav linkedIn'>
 						<li>
 							<Link to={'https://www.linkedin.com/in/eogimenez/'} className='nav-link'>
-								<i class='fa-brands fa-linkedin'></i> LinkedIn
+								<i className='fa-brands fa-linkedin'></i> LinkedIn
 							</Link>
 						</li>
 					</ul>

@@ -64,8 +64,8 @@ export default function ProjectDetail({
 										/>
 										<label htmlFor='ownerCode'>Owner Code</label>
 									</div>
-									<button type='submit' className='btn' data-bs-dismiss='modal'>
-										<i class='fa-solid fa-trash-can'></i>
+									<button type='submit' className='modal__btn' data-bs-dismiss='modal'>
+										<i className='fa-solid fa-trash-can'></i>
 									</button>
 								</form>
 							</div>
@@ -77,35 +77,39 @@ export default function ProjectDetail({
 				<div className='card-body'>
 					<h5 className='card-title'>{project.title}</h5>
 					<p className='card-text'>{project.description}</p>
-					<p className='card-text'>
-						<small className='text-body-secondary'>{project.technologies}</small>
+					<div className=' tech__print'>
+					{project.technologies.map((tech, i) => (
+						<p key={i} className='card-text'>
+							<small className='text-body-secondary'>{tech}</small>
+						</p>
+					))}
+					</div>
+				</div>
+				<div className='iconos'>
+					<p
+						className='card-text eachIcon'
+						onClick={() => {
+							handleClick(!showDetail);
+						}}
+					>
+						<i className='fa-solid fa-arrow-left-long'></i>
+					</p>
+					<p className='card-text eachIcon'>
+						<i className='fa-solid fa-share-nodes'></i>
+					</p>
+					<p className='card-text eachIcon'>
+						<i className='fa-solid fa-pencil'></i>
+					</p>
+					<p
+						className='card-text eachIcon'
+						data-bs-toggle='modal'
+						data-bs-target='#deleteModal'
+						onClick={handleModal}
+					>
+						<i className='fa-solid fa-trash-can'></i>
 					</p>
 				</div>
-					<div className='iconos'>
-						<p
-							className='card-text eachIcon'
-							onClick={() => {
-								handleClick(!showDetail);
-							}}
-						>
-							<i class='fa-solid fa-arrow-left-long'></i>
-						</p>
-						<p className='card-text eachIcon'>
-							<i class='fa-solid fa-share-nodes'></i>
-						</p>
-						<p className='card-text eachIcon'>
-							<i class='fa-solid fa-pencil'></i>
-						</p>
-						<p
-							className='card-text eachIcon'
-							data-bs-toggle='modal'
-							data-bs-target='#deleteModal'
-							onClick={handleModal}
-						>
-							<i class='fa-solid fa-trash-can'></i>
-						</p>
-					</div>
-				
+
 				<img
 					src={project.image}
 					className='card-img-bottom imageDetail'

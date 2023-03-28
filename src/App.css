@@ -1,38 +1,50 @@
+ body {
+	background-image: url(https://res.cloudinary.com/dbld4vcec/image/upload/v1680017466/projects/alex-padurariu-tXYg4Zx7kSU-unsplash_pjlitu.jpg);
+	color: #D6F7DC; 
+	/* background-repeat: no-repeat; */
+	background-size: cover;
+}
+ 
 .nav-link {
 	font-weight: 500;
 }
+
 .background {
-	background-color: #DCD6F7;
+	margin-inline: auto;
+	border: solid 2px #FF6C7F;
+	max-width: 90%;
+	border-top: none;
 }
 
-.displ {
+.navbar__display {
 	display: flex;
 	justify-content: space-between;
 }
 
-.testing {
-	transform: .3s;
+.navbar-brand,
+.newProject,
+.nav-link {
+	color: #D6F7DC;
 }
 
-.testing:hover{
-	text-shadow: 0 5px 15px #BC5D2E;
+.navbar-brand:hover,
+.newProject:hover,
+.nav-link:hover {
+	color: #D6F7DC;
+	text-shadow: 0 5px 15px #FF6C7F;
 }
 
 .linkedIn {
 	margin-right: 45px;
 }
-
 .alertImagen {
 	height: 1.2em;
 }
 .app {
-	
 	display: grid;
 	grid-auto-flow: row;
-	/* grid-auto-columns:minmax(20%, 3fr); */
 	gap: 1em;
-	margin-inline: 2em;
-	margin-top: 2em;
+	margin: 2em 2em 0 2em;
 }
 
 .projectCard{
@@ -43,7 +55,7 @@
 }
 
 .projectCard:hover {
-	box-shadow: 0 5px 15px #A6B1E1;
+	text-shadow: 0 5px 15px #FF6C7F;
 }
 
 .projectDetail {
@@ -54,10 +66,44 @@
 
 #newProject {
  	display: grid;
-	grid-template-columns: 1fr;
+	grid-template-columns: repeat(2, 1fr);
 	width: auto;
 	padding: 2em;
+	gap: 2em;
+	color: #6C63FF;
 }
+.btn {
+	background-color: #6C63FF;
+	font-weight: 500;
+	max-width: 200px;
+	transition: .8s;
+}
+.btn:hover {
+	background-color: #F7D6DC;
+}
+
+.modal {
+	color: black
+}
+
+.modal__btn {
+	background-color: white;
+	border: none;
+}
+
+.tech__form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.tech__print {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: .5em;
+}
+
 .cardDetail {
   width: 40em;
   height: 35em;
@@ -67,11 +113,6 @@
 .cardDetail > div {
 	margin: 1em 1em 0 1em;
 	padding: 0;
-}
-
-.imageCard {
-	max-height: 14em;
-	
 }
 
 .imageDetail {
@@ -89,7 +130,12 @@
 	text-align: center;
 }
 
-@media (min-width: 46rem) {
+.text-truncate {
+	max-width: 450px;
+
+}
+
+@media (min-width: 60rem) {
 	.app {
 		grid-template-columns: repeat(2, 1fr);
 	}
@@ -97,13 +143,13 @@
 		max-width: 28em;
 	}
 }
-@media (min-width: 64rem) {
+@media (min-width: 88rem) {
 	.app {
 		grid-template-columns: repeat(3, 1fr);
 	}
 }
-@media (min-width: 85rem) {
+@media (min-width: 100rem) {
 	.app {
-		grid-template-columns: repeat(4, 1fr);
+		grid-template-columns: repeat(3, 1fr);
 	}
 }

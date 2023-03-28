@@ -31,7 +31,6 @@ function App() {
 		getProjects();
 	}, [somethingChange]);
 
-	console.log(projects)
 	return (
 		<>
 			<Navbar handleNewProject={handleNewProject} newProject={newProject} />
