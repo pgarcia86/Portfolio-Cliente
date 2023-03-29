@@ -66,7 +66,7 @@
 
 #newProject {
  	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: repeat(1, 1fr);
 	width: auto;
 	padding: 2em;
 	gap: 2em;
@@ -139,6 +139,14 @@
 	.app {
 		grid-template-columns: repeat(2, 1fr);
 	}
+	#newProject {
+		display: grid;
+	   grid-template-columns: repeat(2, 1fr);
+	   width: auto;
+	   padding: 2em;
+	   gap: 2em;
+	   color: #6C63FF;
+   }
 	.projectCard {
 		max-width: 28em;
 	}
