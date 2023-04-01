@@ -7,4 +7,8 @@ check server side: [here](https://github.com/eoGimenez/portfolio-server)
 
 Es una pagina simple para gestionar Portfolios, la idea de no tener un Login es para agilizar a los que quieran mierar tu portfolio
 
+
+## Paths
+
+
 WORK IN PROGRESS
