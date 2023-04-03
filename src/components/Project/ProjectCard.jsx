@@ -18,7 +18,7 @@ export default function ProjectCard({ project, handleClick, showDetail }) {
 						<p className='text-truncate'>{project.description}</p>
 					</div>
 				</div>
-			)}
+			)}   
 		</>
 	);
 }

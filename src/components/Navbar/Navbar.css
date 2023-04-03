@@ -1,0 +1,37 @@
+.background {
+	margin-inline: auto;
+	border: solid 2px #FF6C7F;
+	max-width: 90%;
+	border-top: none;
+}
+
+.navbar__display {
+	display: flex;
+	justify-content: space-between;
+}
+
+.about__me,
+.newProject,
+.nav-link {
+	color: #D6F7DC;
+}
+
+.about__me:hover,
+.newProject:hover,
+.nav-link:hover {
+	color: #D6F7DC;
+	text-shadow: 0 5px 15px #FF6C7F;
+}
+
+.linkedIn {
+	margin-right: 45px;
+}
+
+.navbar-nav li {
+    margin: .2em .5em;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+.navbar-nav li p {
+    margin: auto;
+}

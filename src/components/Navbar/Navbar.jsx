@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
+import './Navbar.css'
 
 export default function Navbar({ handleNewProject, newProject }) {
 	return (
 		<nav className='navbar navbar-dark navbar-expand-lg background'>
 			<div className='container-fluid '>
-				<p className='navbar-brand'>About me </p>
 				<button
 					className='navbar-toggler'
 					type='button'
@@ -18,11 +18,12 @@ export default function Navbar({ handleNewProject, newProject }) {
 				</button>
 				<div className='collapse navbar-collapse navbar__display' id='navbarNav'>
 					<ul className='navbar-nav'>
-						{/* <li className='nav-item'>
-							<p className='nav-link' aria-current='page'>
-								Home
+						<li className='nav-item'>
+							<p className='nav-link about__me'
+							>
+								About me
 							</p>
-						</li> */}
+						</li>
 						<li className='nav-item'>
 							<p
 								onClick={() => {
@@ -33,9 +34,6 @@ export default function Navbar({ handleNewProject, newProject }) {
 								New Project
 							</p>
 						</li>
-						{/* 	<li className='nav-item'>
-							<p className='nav-link'>Filtrar</p>
-						</li> */}
 					</ul>
 					<ul className='navbar-nav linkedIn'>
 						<li>

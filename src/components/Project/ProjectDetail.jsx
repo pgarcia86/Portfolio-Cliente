@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import ProjectsService from '../../services/projects.service';
+import ModaleShare from '../ModalShare/ModalShare';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 export default function ProjectDetail({
 	project,
@@ -9,11 +11,16 @@ export default function ProjectDetail({
 	somethingChange,
 }) {
 	const [modal, setModal] = useState(false);
+	const [modalShare, setModalShare] = useState(false);
 	const [ownCode, setOwnCode] = useState('');
 	const projectService = new ProjectsService();
 
 	const handleModal = () => {
 		setModal(true);
+	};
+
+	const handleShare = () => {
+		setModalShare(!modalShare);
 	};
 
 	const deleteHandler = (e) => {
@@ -73,16 +80,17 @@ export default function ProjectDetail({
 					</div>
 				</div>
 			)}
+			{modalShare && <ModaleShare />}
 			<div className='card cardDetail'>
 				<div className='card-body'>
 					<h5 className='card-title'>{project.title}</h5>
 					<p className='card-text'>{project.description}</p>
 					<div className=' tech__print'>
-					{project.technologies.map((tech, i) => (
-						<p key={i} className='card-text'>
-							<small className='text-body-secondary'>{tech}</small>
-						</p>
-					))}
+						{project.technologies.map((tech, i) => (
+							<p key={i} className='card-text'>
+								<small className='text-body-secondary'>{tech}</small>
+							</p>
+						))}
 					</div>
 				</div>
 				<div className='iconos'>
@@ -94,8 +102,15 @@ export default function ProjectDetail({
 					>
 						<i className='fa-solid fa-arrow-left-long'></i>
 					</p>
-					<p className='card-text eachIcon'>
-						<i className='fa-solid fa-share-nodes'></i>
+					<p
+						className='card-text eachIcon'
+						data-bs-toggle='modal'
+						data-bs-target='#shareModal'
+						onClick={handleShare}
+					>
+						<CopyToClipboard text={'http://localhost:3000/projects/' + project._id}>
+							<i className='fa-solid fa-share-nodes'></i>
+						</CopyToClipboard>
 					</p>
 					<p className='card-text eachIcon'>
 						<i className='fa-solid fa-pencil'></i>

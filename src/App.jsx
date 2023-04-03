@@ -6,11 +6,14 @@ import ProjectsService from './services/projects.service';
 import ProjectCard from './components/Project/ProjectCard';
 import ProjectDetail from './components/Project/ProjectDetail';
 import NewProject from './components/Project/NewProject';
+import Footer from './components/Footer/Footer';
+import { Route, Routes } from 'react-router-dom';
+import ProjectIdPage from './pages/ProjectIdPage';
 
 function App() {
 	const { projects, getProjects } = useContext(projectsContext);
 	const [showDetail, setShowDetail] = useState(false);
-	const [project, setProject] = useState('');
+	const [project, setProject] = useState({});
 	const [newProject, setNewProject] = useState(false);
 	const [details, setDetails] = useState('app');
 	const [somethingChange, SetSomethingChange] = useState(false);
@@ -63,6 +66,11 @@ function App() {
 					/>
 				)}
 			</div>
+			<Routes>
+				<Route path={'/projects/:projectId'} element={<ProjectIdPage/>} />
+				<Route path={'/projects'} element={<Footer />}/>
+			</Routes>
+			
 		</>
 	);
 }
