@@ -7,7 +7,7 @@ export default function ProjectDetail({
 	project,
 	handleClick,
 	showDetail,
-	SetSomethingChange,
+	setSomethingChange,
 	somethingChange,
 }) {
 	const [modal, setModal] = useState(false);
@@ -28,7 +28,7 @@ export default function ProjectDetail({
 		projectService
 			.deleteProject(project._id, { ownCode: ownCode })
 			.then((result) => {
-				SetSomethingChange(!somethingChange);
+				setSomethingChange(!somethingChange);
 				setModal(!modal);
 				handleClick(!showDetail);
 			})
@@ -108,7 +108,7 @@ export default function ProjectDetail({
 						data-bs-target='#shareModal'
 						onClick={handleShare}
 					>
-						<CopyToClipboard text={'http://localhost:3000/projects/' + project._id}>
+						<CopyToClipboard text={'http://localhost:3000/' + project._id}>
 							<i className='fa-solid fa-share-nodes'></i>
 						</CopyToClipboard>
 					</p>

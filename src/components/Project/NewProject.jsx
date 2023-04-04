@@ -2,7 +2,7 @@ import { useState } from 'react';
 import ProjectsService from '../../services/projects.service';
 
 export default function NewProject({
-	SetSomethingChange,
+	setSomethingChange,
 	somethingChange,
 	handleNewProject,
 	newProject,
@@ -46,7 +46,7 @@ export default function NewProject({
 				image,
 			})
 			.then((result) => {
-				SetSomethingChange(!somethingChange);
+				setSomethingChange(!somethingChange);
 				handleNewProject(!newProject);
 			})
 			.catch((err) => console.log(err));

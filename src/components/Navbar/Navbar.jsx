@@ -1,7 +1,18 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Navbar.css'
 
-export default function Navbar({ handleNewProject, newProject }) {
+export default function Navbar({ handleNewProject, newProject, setIsntHome }) {
+	const navigate = useNavigate()
+
+	const handleAboutme = () => {
+		setIsntHome(true)
+		navigate('/aboutme')
+	}
+	const handleHome = () => {
+		setIsntHome(false)
+		navigate('/')
+	}
+
 	return (
 		<nav className='navbar navbar-dark navbar-expand-lg background'>
 			<div className='container-fluid '>
@@ -19,9 +30,15 @@ export default function Navbar({ handleNewProject, newProject }) {
 				<div className='collapse navbar-collapse navbar__display' id='navbarNav'>
 					<ul className='navbar-nav'>
 						<li className='nav-item'>
-							<p className='nav-link about__me'
+							<p onClick={handleAboutme} className='nav-link about__me'
 							>
 								About me
+							</p>
+						</li>
+						<li className='nav-item'>
+							<p onClick={handleHome} className='nav-link about__me'
+							>
+								Home
 							</p>
 						</li>
 						<li className='nav-item'>
