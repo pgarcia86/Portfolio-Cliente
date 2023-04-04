@@ -36,4 +36,6 @@ $ npm start
 - ProjectCard 
 - ProjectDetail
 
+---
+
 WORK IN PROGRESS
