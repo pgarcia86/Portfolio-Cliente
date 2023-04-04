@@ -9,7 +9,7 @@ export default function ProjectCard({ project, handleClick, showDetail }) {
 					}}
 				>
 					<div>
-						<h3>{project.title}</h3>
+						<h2>{project.title}</h2>
 						<div className='tech__print'>
 							{project.technologies.map((tech, i) => (
 								<p key={i}>{tech}</p>

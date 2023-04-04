@@ -1,25 +1,17 @@
-
 body {
 	background-image: url(https://res.cloudinary.com/dbld4vcec/image/upload/v1680017466/projects/alex-padurariu-tXYg4Zx7kSU-unsplash_pjlitu.jpg);
-	color: #D6F7DC; 
+	color: #d6f7dc;
 	/* background-repeat: no-repeat; */
 	background-size: cover;
 	min-height: 100vh;
 	position: relative;
 	padding-bottom: 3.4em;
 }
- 
-#footer {
-	background-color: #D6F7DC;
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	height: 3em;
-}
 
 .alertImagen {
 	height: 1.2em;
 }
+
 .app {
 	display: grid;
 	grid-auto-flow: row;
@@ -27,15 +19,15 @@ body {
 	margin: 2em 2em 0 2em;
 }
 
-.projectCard{
+.projectCard {
 	height: 25em;
 	max-width: 22em;
-	transition: .3s ;
+	transition: 0.3s;
 	text-align: center;
 }
 
 .projectCard:hover {
-	text-shadow: 0 5px 15px #FF6C7F;
+	text-shadow: 0 5px 15px #ff6c7f;
 }
 
 .projectDetail {
@@ -45,25 +37,25 @@ body {
 }
 
 #newProject {
- 	display: grid;
+	display: grid;
 	grid-template-columns: repeat(1, 1fr);
 	width: auto;
 	padding: 2em;
 	gap: 2em;
-	color: #6C63FF;
+	color: #6c63ff;
 }
 .btn {
-	background-color: #6C63FF;
+	background-color: #6c63ff;
 	font-weight: 500;
 	max-width: 200px;
-	transition: .8s;
+	transition: 0.8s;
 }
 .btn:hover {
-	background-color: #F7D6DC;
+	background-color: #f7d6dc;
 }
 
 .modal {
-	color: black
+	color: black;
 }
 
 .modal__btn {
@@ -81,13 +73,12 @@ body {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	gap: .5em;
+	gap: 0.5em;
 }
 
 .cardDetail {
-  width: 40em;
-  height: 35em;
-  
+	width: 40em;
+	height: 35em;
 }
 
 .cardDetail > div {
@@ -108,7 +99,7 @@ body {
 }
 .eachIcon {
 	text-align: center;
-	margin: 0 0 .3em 0;
+	margin: 0 0 0.3em 0;
 }
 
 .text-truncate {
@@ -116,7 +107,7 @@ body {
 }
 
 .navbar-nav {
-    margin-top: 1em;
+	margin-top: 1em;
 }
 
 @media (min-width: 60rem) {
@@ -125,12 +116,12 @@ body {
 	}
 	#newProject {
 		display: grid;
-	   grid-template-columns: repeat(2, 1fr);
-	   width: auto;
-	   padding: 2em;
-	   gap: 2em;
-	   color: #6C63FF;
-   }
+		grid-template-columns: repeat(2, 1fr);
+		width: auto;
+		padding: 2em;
+		gap: 2em;
+		color: #6c63ff;
+	}
 	.projectCard {
 		max-width: 28em;
 	}
