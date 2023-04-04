@@ -15,7 +15,7 @@ export default function NewProject({
 	});
 	const [technologies, setTechnologies] = useState([]);
 	const [image, setImage] = useState('');
-	const [techAux, setTechAux] = useState('')
+	const [techAux, setTechAux] = useState('');
 
 	const projectService = new ProjectsService();
 	const handleTech = (e) => {
@@ -53,8 +53,8 @@ export default function NewProject({
 	};
 
 	return (
-		<div id='newProject' >
-			<form  onSubmit={submitHandler}>
+		<div id='newProject'>
+			<form onSubmit={submitHandler}>
 				<div className='alert alert-primary d-flex align-items-center' role='alert'>
 					<svg
 						xmlns='http://www.w3.org/2000/svg'
@@ -78,27 +78,27 @@ export default function NewProject({
 					/>
 					<label htmlFor='title'>Project title</label>
 				</div>
+				<div class='form-floating mb-3'>
+					<textarea
+						class='form-control'
+						placeholder='Leave a comment here'
+						id='description'
+						style={{ height: '100px' }}
+						value={form.description}
+						onChange={(e) => setForm({ ...form, description: e.target.value })}
+					></textarea>
+					<label for='description'>Description</label>
+				</div>
 				<div className='form-floating mb-3'>
 					<input
 						type='text'
 						className='form-control'
-						id='description'
+						id='technologies'
 						placeholder='name@example.com'
-						value={form.description}
-						onChange={(e) => setForm({ ...form, description: e.target.value })}
+						value={' ' + technologies}
+						onChange={(e) => setForm({ ...form, technologies: e.target.value })}
 					/>
-					<label htmlFor='description'>Description</label>
 				</div>
-					<div className='form-floating mb-3'>
-						<input
-							type='text'
-							className='form-control'
-							id='technologies'
-							placeholder='name@example.com'
-							value={" "+technologies}
-							onChange={(e) => setForm({ ...form, technologies: e.target.value })}
-						/>
-					</div>
 				<div className='form-floating mb-3'>
 					<input
 						type='text'

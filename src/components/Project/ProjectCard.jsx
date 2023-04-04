@@ -11,11 +11,12 @@ export default function ProjectCard({ project, handleClick, showDetail }) {
 					<div>
 						<h2>{project.title}</h2>
 						<div className='tech__print'>
+						
 							{project.technologies.map((tech, i) => (
 								<p key={i}>{tech}</p>
 							))}
 						</div>
-						<p className='text-truncate'>{project.description}</p>
+						<p className='truncate'>{project.description}</p>
 					</div>
 				</div>
 			)}   
