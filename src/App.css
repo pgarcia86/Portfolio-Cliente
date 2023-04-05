@@ -1,7 +1,8 @@
 body {
+	background-color: #333070;
 	background-image: url(https://res.cloudinary.com/dbld4vcec/image/upload/v1680017466/projects/alex-padurariu-tXYg4Zx7kSU-unsplash_pjlitu.jpg);
 	color: #d6f7dc;
-	/* background-repeat: no-repeat; */
+	background-blend-mode: multiply;
 	background-size: cover;
 	min-height: 100vh;
 	position: relative;
@@ -18,23 +19,12 @@ body {
 	gap: 1em;
 	margin: 2em 2em 0 2em;
 }
-
-.projectCard {
-	height: 25em;
-	max-width: 22em;
-	transition: 0.3s;
-	text-align: center;
-}
-
-.projectCard:hover {
-	text-shadow: 0 5px 15px #ff6c7f;
-}
-
 .projectDetail {
-	margin: 5em 1em 1em 1em;
+	margin: auto;
 	display: flex;
 	justify-content: center;
-	min-height: 100vh
+	width: 90vw;
+	min-height: 90vh;
 }
 
 #newProject {
@@ -69,14 +59,6 @@ body {
 	flex-direction: column;
 	justify-content: center;
 }
-
-.tech__print {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	gap: 0.5em;
-}
-
 .cardDetail {
 	width: 40em;
 	height: 35em;
@@ -86,29 +68,6 @@ body {
 	margin: 1em 1em 0 1em;
 	padding: 0;
 }
-
-.imageDetail {
-	height: 20em;
-	width: auto;
-	margin: 0 1em 1em 1em;
-}
-
-.iconos {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-}
-.eachIcon {
-	text-align: center;
-	margin: 0 0 0.3em 0;
-}
-
-.truncate {
-	overflow: hidden;
-	display: -webkit-box;
-	-webkit-line-clamp: 5;
-	-webkit-box-orient: vertical;
-}
-
 .navbar-nav {
 	margin-top: 1em;
 }
@@ -127,7 +86,10 @@ body {
 	}
 	.projectCard {
 		max-width: 28em;
-		margin:auto;
+		margin: auto;
+	}
+	.testHover > :not(:hover) {
+		opacity: 0.5;
 	}
 	.navbar-nav {
 		margin-top: auto;

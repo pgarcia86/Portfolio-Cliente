@@ -15,7 +15,7 @@ export default function Footer() {
 
 	return (
 		<div id='footer' onMouseEnter={handleHover} onMouseLeave={handleHover}>
-			<Link to='https://github.com/eoGimenez'>
+			<Link className='link__github' to='https://github.com/eoGimenez'>
 				<i className={bounce}>
 					{' '}
 					<span>GitHub</span>

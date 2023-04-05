@@ -1,7 +1,7 @@
 .background {
-	margin-inline: auto;
+	margin: 0 2em;
 	border: solid 2px #FF6C7F;
-	max-width: 90%;
+	max-width: 95vw;
 	border-top: none;
 }
 
@@ -26,7 +26,10 @@
 .linkedIn {
 	margin-right: 45px;
 }
-
+.nav-link {
+	display: flex;
+	gap: .3em;
+}
 .navbar-nav li {
     margin: .2em .5em;
     font-size: 1.2em;

@@ -46,6 +46,7 @@ export default function NewProject({
 				image,
 			})
 			.then((result) => {
+				console.log("QUE ES RESULT", result)
 				setSomethingChange(!somethingChange);
 				handleNewProject(!newProject);
 			})

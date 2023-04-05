@@ -13,7 +13,7 @@ export default function AboutMePage({ handleIsntHome, isntHome, setIsntHome }) {
 			<div id='profile'>
 				<div className='profile__me'>
 					<h2>Eugenio Oscar Giménez</h2>
-					<h3>Web Developer</h3>
+					<h4>Web Developer</h4>
 					<p>
 						Mi nombre es Eugenio Giménez, soy Web Developer y de pequeño estudie algunos lenguajes
 						de programación como <strong>C++, Delphi y pascal,</strong> luego estudie hostelería y vine a vivir a

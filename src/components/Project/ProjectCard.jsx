@@ -1,6 +1,8 @@
+import './Project.css';
+
 export default function ProjectCard({ project, handleClick, showDetail }) {
 	return (
-		<>
+		<div className='testHover'>
 			{!showDetail && (
 				<div
 					className='projectCard'
@@ -11,15 +13,14 @@ export default function ProjectCard({ project, handleClick, showDetail }) {
 					<div>
 						<h2>{project.title}</h2>
 						<div className='tech__print'>
-						
 							{project.technologies.map((tech, i) => (
-								<p key={i}>{tech}</p>
+								<i key={i} className={tech}></i>
 							))}
 						</div>
 						<p className='truncate'>{project.description}</p>
 					</div>
 				</div>
-			)}   
-		</>
+			)}
+		</div>
 	);
 }

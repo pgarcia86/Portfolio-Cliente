@@ -4,6 +4,7 @@ import { CopyToClipboard } from 'react-copy-to-clipboard';
 import ModaleShare from '../../components/ModalShare/ModalShare';
 import Footer from '../../components/Footer/Footer';
 import ProjectsService from '../../services/projects.service';
+import '../../components/Project/Project.css'
 
 export default function ProjectIdPage({
 	projects,
@@ -92,56 +93,56 @@ export default function ProjectIdPage({
 			)}
 			{modalShare && <ModaleShare />}
 			{project && (
-				<div className='projectDetail'>
-					<div className='card cardDetail'>
-						<div className='card-body'>
-							<h5 className='card-title'>{project.title}</h5>
-							<p className='card-text'>{project.description}</p>
-							<div className=' tech__print'>
-								{project.technologies.map((tech, i) => (
-									<p key={i} className='card-text'>
-										<small className='text-body-secondary'>{tech}</small>
-									</p>
-								))}
-							</div>
+				<div id='projectDetail'>
+					<div className='iconos'>
+						<p
+							className='eachIcon'
+							onClick={() => {
+								handleIsntHome(!isntHome);
+							}}
+						>
+							<i className='fa-solid fa-arrow-left-long fa-lg'></i>
+						</p>
+						<p
+							className='eachIcon'
+							data-bs-toggle='modal'
+							data-bs-target='#shareModal'
+							onClick={handleShare}
+						>
+							<CopyToClipboard text={'http://localhost:3000/' + project._id}>
+								<i className='fa-regular fa-share-from-square fa-lg'></i>
+							</CopyToClipboard>
+						</p>
+						<p className='eachIcon'>
+							<i className='fa-solid fa-pencil fa-lg'></i>
+						</p>
+						<p
+							className='eachIcon'
+							data-bs-toggle='modal'
+							data-bs-target='#deleteModal'
+							onClick={handleModal}
+						>
+							<i className='fa-solid fa-trash-can fa-lg'></i>
+						</p>
+					</div>
+					<div className='CardDetail'>
+						<div className='card__body'>
+							<h4>{project.title}</h4>
+							<p>{project.description}</p>
 						</div>
-						<div className='iconos'>
-							<p
-								className='card-text eachIcon'
-								onClick={() => {
-									handleIsntHome(!isntHome);
-								}}
-							>
-								<i className='fa-solid fa-arrow-left-long'></i>
-							</p>
-							<p
-								className='card-text eachIcon'
-								data-bs-toggle='modal'
-								data-bs-target='#shareModal'
-								onClick={handleShare}
-							>
-								<CopyToClipboard text={'http://localhost:3000/' + project._id}>
-									<i className='fa-solid fa-share-nodes'></i>
-								</CopyToClipboard>
-							</p>
-							<p className='card-text eachIcon'>
-								<i className='fa-solid fa-pencil'></i>
-							</p>
-							<p
-								className='card-text eachIcon'
-								data-bs-toggle='modal'
-								data-bs-target='#deleteModal'
-								onClick={handleModal}
-							>
-								<i className='fa-solid fa-trash-can'></i>
-							</p>
+						<div className='card__img'>
+							<img
+								src={project.image}
+								className='card-img-bottom imageDetail'
+								alt={'This is the image of the project :' + project.title}
+							/>
 						</div>
+					</div>
 
-						<img
-							src={project.image}
-							className='card-img-bottom imageDetail'
-							alt={'This is the image of the project :' + project.title}
-						/>
+					<div className=' tech__print'>
+						{project.technologies.map((tech, i) => (
+							<i key={i} className={tech}></i>
+						))}
 					</div>
 				</div>
 			)}

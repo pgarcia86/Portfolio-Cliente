@@ -24,6 +24,7 @@ function App() {
 	const handleClick = (showDetail, project) => {
 		setShowDetail(showDetail);
 		setProject(project);
+		window.scrollTo(0, 0);
 		details === 'app' ? setDetails('projectDetail') : setDetails('app');
 	};
 
@@ -32,19 +33,24 @@ function App() {
 		if (newProject === true && details === 'app') setDetails('projectDetail');
 		if (newProject === false && showDetail === false) setDetails('app');
 	};
-
+	
 	const handleIsntHome = (isntHome) => {
 		setIsntHome(isntHome);
 		navigate('/');
 	};
-
 	useEffect(() => {
 		getProjects();
 	}, [somethingChange]);
 
 	return (
 		<>
-			<Navbar handleNewProject={handleNewProject} newProject={newProject} setIsntHome={setIsntHome} />
+			<Navbar
+				handleNewProject={handleNewProject}
+				newProject={newProject}
+				setIsntHome={setIsntHome}
+				setShowDetail={setShowDetail}
+				setDetails={setDetails}
+			/>
 			{!isntHome && (
 				<div className={details}>
 					{!showDetail &&

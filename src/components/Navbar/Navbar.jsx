@@ -1,17 +1,26 @@
 import { Link, useNavigate } from 'react-router-dom';
-import './Navbar.css'
+import './Navbar.css';
 
-export default function Navbar({ handleNewProject, newProject, setIsntHome }) {
-	const navigate = useNavigate()
+export default function Navbar({
+	handleNewProject,
+	newProject,
+	setIsntHome,
+	setShowDetail,
+	setDetails,
+}) {
+	const navigate = useNavigate();
 
 	const handleAboutme = () => {
-		setIsntHome(true)
-		navigate('/aboutme')
-	}
+		setIsntHome(true);
+		navigate('/aboutme');
+	};
 	const handleHome = () => {
-		setIsntHome(false)
-		navigate('/')
-	}
+		setIsntHome(false);
+		setShowDetail(false);
+		setDetails('app');
+		handleNewProject(false);
+		navigate('/');
+	};
 
 	return (
 		<nav className='navbar navbar-dark navbar-expand-lg background'>
@@ -30,14 +39,12 @@ export default function Navbar({ handleNewProject, newProject, setIsntHome }) {
 				<div className='collapse navbar-collapse navbar__display' id='navbarNav'>
 					<ul className='navbar-nav'>
 						<li className='nav-item'>
-							<p onClick={handleAboutme} className='nav-link about__me'
-							>
+							<p onClick={handleAboutme} className='nav-link about__me'>
 								About me
 							</p>
 						</li>
 						<li className='nav-item'>
-							<p onClick={handleHome} className='nav-link about__me'
-							>
+							<p onClick={handleHome} className='nav-link about__me'>
 								Home
 							</p>
 						</li>
@@ -55,7 +62,7 @@ export default function Navbar({ handleNewProject, newProject, setIsntHome }) {
 					<ul className='navbar-nav linkedIn'>
 						<li>
 							<Link to={'https://www.linkedin.com/in/eogimenez/'} className='nav-link'>
-								<i className='fa-brands fa-linkedin'></i> LinkedIn
+								<i className='fa-brands fa-linkedin fa-xl'></i> LinkedIn
 							</Link>
 						</li>
 					</ul>

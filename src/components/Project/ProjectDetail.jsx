@@ -2,6 +2,8 @@ import { useState } from 'react';
 import ProjectsService from '../../services/projects.service';
 import ModaleShare from '../ModalShare/ModalShare';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
+import './Project.css';
+import EditProject from './EditProject';
 
 export default function ProjectDetail({
 	project,
@@ -13,6 +15,13 @@ export default function ProjectDetail({
 	const [modal, setModal] = useState(false);
 	const [modalShare, setModalShare] = useState(false);
 	const [ownCode, setOwnCode] = useState('');
+	const [isEdit, setIsEdit] = useState(false);
+	const [beat, setBeat] = useState({
+		back: '',
+		share: '',
+		edit: '',
+		delete: '',
+	});
 	const projectService = new ProjectsService();
 
 	const handleModal = () => {
@@ -81,56 +90,81 @@ export default function ProjectDetail({
 				</div>
 			)}
 			{modalShare && <ModaleShare />}
-			<div className='card cardDetail'>
-				<div className='card-body'>
-					<h5 className='card-title'>{project.title}</h5>
-					<p className='card-text'>{project.description}</p>
+			{!isEdit && (
+				<div id='projectDetail'>
+					<div className='iconos'>
+						<div
+							className='eachIcon'
+							onMouseEnter={() => setBeat({ ...beat, back: ' fa-beat-fade' })}
+							onMouseLeave={() => setBeat({ ...beat, back: ' ' })}
+							onClick={() => {
+								handleClick(!showDetail);
+							}}
+						>
+							<i className={'fa-solid fa-arrow-left-long fa-xl' + beat.back}></i>
+						</div>
+						<div
+							className='eachIcon'
+							data-bs-toggle='modal'
+							data-bs-target='#shareModal'
+							onMouseEnter={() => setBeat({ ...beat, share: ' fa-beat-fade' })}
+							onMouseLeave={() => setBeat({ ...beat, share: ' ' })}
+							onClick={handleShare}
+						>
+							<CopyToClipboard text={'http://localhost:3000/' + project._id}>
+								<i className={'fa-regular fa-share-from-square fa-xl' + beat.share}></i>
+							</CopyToClipboard>
+						</div>
+						<div
+							className='eachIcon'
+							onMouseEnter={() => setBeat({ ...beat, edit: ' fa-beat-fade' })}
+							onMouseLeave={() => setBeat({ ...beat, edit: ' ' })}
+							onClick={() => setIsEdit(!isEdit)}
+						>
+							<i className={'fa-solid fa-pencil fa-xl' + beat.edit}></i>
+						</div>
+						<div
+							className='eachIcon'
+							data-bs-toggle='modal'
+							data-bs-target='#deleteModal'
+							onMouseEnter={() => setBeat({ ...beat, delete: ' fa-beat-fade' })}
+							onMouseLeave={() => setBeat({ ...beat, delete: ' ' })}
+							onClick={handleModal}
+						>
+							<i className={'fa-solid fa-trash-can fa-xl' + beat.delete}></i>
+						</div>
+					</div>
+					<div className='CardDetail'>
+						<div className='card__body'>
+							<h4>{project.title}</h4>
+							<p>{project.description}</p>
+						</div>
+						<div className='card__img'>
+							<img
+								src={project.image}
+								className='card-img-bottom imageDetail'
+								alt={'This is the image of the project :' + project.title}
+							/>
+						</div>
+					</div>
+
 					<div className=' tech__print'>
 						{project.technologies.map((tech, i) => (
-							<p key={i} className='card-text'>
-								<small className='text-body-secondary'>{tech}</small>
-							</p>
+							<i key={i} className={tech}></i>
 						))}
 					</div>
 				</div>
-				<div className='iconos'>
-					<p
-						className='card-text eachIcon'
-						onClick={() => {
-							handleClick(!showDetail);
-						}}
-					>
-						<i className='fa-solid fa-arrow-left-long'></i>
-					</p>
-					<p
-						className='card-text eachIcon'
-						data-bs-toggle='modal'
-						data-bs-target='#shareModal'
-						onClick={handleShare}
-					>
-						<CopyToClipboard text={'http://localhost:3000/' + project._id}>
-							<i className='fa-solid fa-share-nodes'></i>
-						</CopyToClipboard>
-					</p>
-					<p className='card-text eachIcon'>
-						<i className='fa-solid fa-pencil'></i>
-					</p>
-					<p
-						className='card-text eachIcon'
-						data-bs-toggle='modal'
-						data-bs-target='#deleteModal'
-						onClick={handleModal}
-					>
-						<i className='fa-solid fa-trash-can'></i>
-					</p>
-				</div>
-
-				<img
-					src={project.image}
-					className='card-img-bottom imageDetail'
-					alt={'This is the image of the project :' + project.title}
+			)}
+			{isEdit && (
+				<EditProject
+					project={project}
+					setSomethingChange={setSomethingChange}
+					somethingChange={somethingChange}
+					showDetail={showDetail}
+					handleClick={handleClick}
+					setIsEdit={setIsEdit}
 				/>
-			</div>
+			)}
 		</>
 	);
 }

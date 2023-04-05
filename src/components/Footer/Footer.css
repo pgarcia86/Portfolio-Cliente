@@ -12,7 +12,9 @@
 #footer i {
 	color: black;
 }
-
+.link__github {
+	text-decoration: none;
+}
 span {
 	color: #d6f7dc;
 	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
