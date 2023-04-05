@@ -2,6 +2,7 @@ import { useState } from 'react';
 import ProjectsService from '../../services/projects.service';
 import ModaleShare from '../ModalShare/ModalShare';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
+import { Link } from 'react-router-dom';
 import './Project.css';
 import EditProject from './EditProject';
 
@@ -43,7 +44,6 @@ export default function ProjectDetail({
 			})
 			.catch((err) => console.log(err));
 	};
-
 	return (
 		<>
 			{modal && (
@@ -145,6 +145,7 @@ export default function ProjectDetail({
 								className='card-img-bottom imageDetail'
 								alt={'This is the image of the project :' + project.title}
 							/>
+							<Link to={project.urlGit}>Link al repositorio !</Link>
 						</div>
 					</div>
 

@@ -79,16 +79,16 @@ export default function NewProject({
 					/>
 					<label htmlFor='title'>Project title</label>
 				</div>
-				<div class='form-floating mb-3'>
+				<div className='form-floating mb-3'>
 					<textarea
-						class='form-control'
+						className='form-control'
 						placeholder='Leave a comment here'
 						id='description'
 						style={{ height: '100px' }}
 						value={form.description}
 						onChange={(e) => setForm({ ...form, description: e.target.value })}
 					></textarea>
-					<label for='description'>Description</label>
+					<label htmlFor='description'>Description</label>
 				</div>
 				<div className='form-floating mb-3'>
 					<input

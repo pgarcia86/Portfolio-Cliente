@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import ProjectsService from '../../services/projects.service';
-import './Project.css'
+import './Project.css';
 
 export default function EditProject({
 	setSomethingChange,
@@ -58,6 +58,14 @@ export default function EditProject({
 			.catch((err) => console.log(err));
 	};
 
+	const deleteTechHandler = (index) => {
+		e.preventDefault();
+		const newTechArr = technologies.splice(1, index);
+		setTechnologies([...newTechArr]);
+
+		console.log('COMO QUEDA', newTechArr);
+	};
+
 	return (
 		<div>
 			<div
@@ -96,18 +104,28 @@ export default function EditProject({
 						/>
 						<label htmlFor='title'>Project title</label>
 					</div>
-					<div class='form-floating mb-3'>
+					<div className='form-floating mb-3'>
 						<textarea
-							class='form-control'
+							className='form-control'
 							placeholder='Leave a comment here'
 							id='description'
 							style={{ height: '100px' }}
 							value={form.description}
 							onChange={(e) => setForm({ ...form, description: e.target.value })}
 						></textarea>
-						<label for='description'>Description</label>
+						<label htmlFor='description'>Description</label>
 					</div>
-					<div className='form-floating mb-3'>
+					<select className='form-select form-select-lg mb-3' aria-label='.form-select-lg tech'>
+						<option value='tech'>Select Tech</option>
+						{technologies.map((tech, i) => {
+							return (
+								<option key={i} value={i} onClick={() => deleteTechHandler(i)}>
+									{tech}
+								</option>
+							);
+						})}
+					</select>
+					{/* 	<div className='form-floating mb-3'>
 						<input
 							type='text'
 							className='form-control'
@@ -116,7 +134,7 @@ export default function EditProject({
 							value={' ' + form.technologies}
 							onChange={(e) => setForm({ ...form, technologies: e.target.value })}
 						/>
-					</div>
+					</div> */}
 					<div className='form-floating mb-3'>
 						<input
 							type='text'
@@ -156,7 +174,7 @@ export default function EditProject({
 						Edit Project
 					</button>
 				</form>
-				<form className='tech__form' onSubmit={handleTech}>
+				<form className='tech__form' onSubmit={() => deleteTechHandler(i)}>
 					<div className='form-floating mb-3'>
 						<input
 							type='text'
