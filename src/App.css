@@ -89,7 +89,7 @@ body {
 		margin: auto;
 		opacity: 1;
 	}
-	
+
 	.testHover:not(.projectCard:hover) > :not(:hover) {
 		opacity: 0.6;
 	}

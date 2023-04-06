@@ -14,9 +14,13 @@ export default function Footer() {
 	};
 
 	return (
-		<div id='footer' onMouseEnter={handleHover} onMouseLeave={handleHover}>
-		<p>Copyright 2023.</p>
-			<Link className='link__github' to='https://github.com/eoGimenez' target='_blank'>
+		<div id="footer" onMouseEnter={handleHover} onMouseLeave={handleHover}>
+			<p>Copyright 2023.</p>
+			<Link
+				className="link__github"
+				to="https://github.com/eoGimenez"
+				target="_blank"
+			>
 				<i className={bounce}>
 					{' '}
 					<span> GitHub</span>

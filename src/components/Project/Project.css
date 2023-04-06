@@ -20,7 +20,7 @@
 .CardDetail p {
 	text-align: center;
 	font-weight: 400;
-	color: #D6F7DC
+	color: #d6f7dc;
 }
 .tech__print {
 	display: flex;
@@ -39,7 +39,7 @@
 	grid-template-columns: repeat(4, 1fr);
 	height: 2em;
 	margin-top: 1em;
-	gap:2em;
+	gap: 2em;
 }
 .eachIcon {
 	text-align: center;
@@ -95,7 +95,7 @@ h4 {
 }
 .link__repo {
 	text-decoration: none;
-	color: #D6F7DC;
+	color: #d6f7dc;
 	font-weight: 600;
 }
 .code__error {

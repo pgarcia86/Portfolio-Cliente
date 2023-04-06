@@ -2,7 +2,6 @@ import { useContext, useEffect, useState } from 'react';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import { projectsContext } from './context/projects.context';
-//import ProjectsService from './services/projects.service';
 import ProjectCard from './components/Project/ProjectCard';
 import ProjectDetail from './components/Project/ProjectDetail';
 import NewProject from './components/Project/NewProject';
@@ -33,7 +32,7 @@ function App() {
 		if (newProject === true && details === 'app') setDetails('projectDetail');
 		if (newProject === false && showDetail === false) setDetails('app');
 	};
-	
+
 	const handleIsntHome = (isntHome) => {
 		setIsntHome(isntHome);
 		navigate('/');

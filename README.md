@@ -1,6 +1,7 @@
 # Portfolio - client side
 
-Aquí pueden encontrar el Front End para generar un portfolio, está hecho en ReactJS y es SPA 
+Aquí pueden encontrar el Front End para generar un portfolio, está hecho en ReactJS y es SPA
+
 - check server side: [here](https://github.com/eoGimenez/portfolio-server)
 
 ## About
@@ -18,14 +19,13 @@ $ npm install
 $ npm start
 ```
 
-
 ## Routes
 
-| Ruta                 | Privacidad      | Renders                  |
-| :------------------: | :-------------: | :----------------------: |
-| / | Publica | App |
-| /aboutme | Publica | AboutMePage |
-| /:projectId | Publica | ProgectIdPage |
+|    Ruta     | Privacidad |    Renders    |
+| :---------: | :--------: | :-----------: |
+|      /      |  Publica   |      App      |
+|  /aboutme   |  Publica   |  AboutMePage  |
+| /:projectId |  Publica   | ProgectIdPage |
 
 # Componentes
 
@@ -33,7 +33,7 @@ $ npm start
 - Footer
 - ModalShare
 - NewProject
-- ProjectCard 
+- ProjectCard
 - ProjectDetail
 
 ---

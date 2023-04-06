@@ -1,6 +1,6 @@
 .background {
 	margin: 0 2em;
-	border: solid 2px #FF6C7F;
+	border: solid 2px #ff6c7f;
 	max-width: 95vw;
 	border-top: none;
 }
@@ -13,14 +13,14 @@
 .about__me,
 .newProject,
 .nav-link {
-	color: #D6F7DC;
+	color: #d6f7dc;
 }
 
 .about__me:hover,
 .newProject:hover,
 .nav-link:hover {
-	color: #D6F7DC;
-	text-shadow: 0 5px 15px #FF6C7F;
+	color: #d6f7dc;
+	text-shadow: 0 5px 15px #ff6c7f;
 }
 
 .linkedIn {
@@ -28,14 +28,13 @@
 }
 .nav-link {
 	display: flex;
-	gap: .3em;
+	gap: 0.3em;
 }
 .navbar-nav li {
-    margin: .2em .5em;
-    font-size: 1.2em;
-    font-weight: 500;
+	margin: 0.2em 0.5em;
+	font-size: 1.2em;
+	font-weight: 500;
 }
 .navbar-nav li p {
-    margin: auto;
+	margin: auto;
 }
-
