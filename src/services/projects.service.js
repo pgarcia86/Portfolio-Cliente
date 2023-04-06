@@ -6,23 +6,23 @@ export default class ProjectsService {
 	}
 
 	getProjects() {
-		return axios.get(`https://portfolio-eogimenez.fly.dev/projects`);
+		return axios.get(`https://portfolio-eogimenez.fly.dev/api/projects`);
 	}
 
 	getOneProject(projId) {
-		return axios.get(`https://portfolio-eogimenez.fly.dev/projects/${projId}`);
+		return axios.get(`https://portfolio-eogimenez.fly.dev/api/projects/${projId}`);
 	}
 
 	addProject(project) {
-		return axios.post(`https://portfolio-eogimenez.fly.dev/projects/new`, project);
+		return axios.post(`https://portfolio-eogimenez.fly.dev/api/projects/new`, project);
 	}
 
 	editProject(projId, project) {
-		return axios.put(`https://portfolio-eogimenez.fly.dev/projects/${projId}/edit`, project);
+		return axios.put(`https://portfolio-eogimenez.fly.dev/api/projects/${projId}/edit`, project);
 	}
 
 	deleteProject(projId, ownCode) {
-		return axios.delete(`https://portfolio-eogimenez.fly.dev/projects/${projId}/delete`, {
+		return axios.delete(`https://portfolio-eogimenez.fly.dev/api/projects/${projId}/delete`, {
 			data: ownCode,
 		});
 	}
