@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export default class ProjectsService {
 	constructor() {
-		this.API_URL = process.env.API_URL;
+		this.API_URL = process.env.REACT_APP_API_URL;
 	}
 
 	getProjects() {
