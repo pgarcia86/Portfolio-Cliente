@@ -24,7 +24,7 @@ body {
 	display: flex;
 	justify-content: center;
 	width: 90vw;
-	min-height: 90vh;
+	min-height: 85vh;
 }
 
 #newProject {
@@ -87,10 +87,15 @@ body {
 	.projectCard {
 		max-width: 28em;
 		margin: auto;
+		opacity: 1;
 	}
-	.testHover > :not(:hover) {
+	
+	.testHover:not(.projectCard:hover) > :not(:hover) {
+		opacity: 0.6;
+	}
+	/* .projectCard > :not(:hover) {
 		opacity: 0.5;
-	}
+	} */
 	.navbar-nav {
 		margin-top: auto;
 	}

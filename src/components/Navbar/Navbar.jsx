@@ -61,7 +61,7 @@ export default function Navbar({
 					</ul>
 					<ul className='navbar-nav linkedIn'>
 						<li>
-							<Link to={'https://www.linkedin.com/in/eogimenez/'} className='nav-link'>
+							<Link to={'https://www.linkedin.com/in/eogimenez/'} className='nav-link' target='_blank'>
 								<i className='fa-brands fa-linkedin fa-xl'></i> LinkedIn
 							</Link>
 						</li>

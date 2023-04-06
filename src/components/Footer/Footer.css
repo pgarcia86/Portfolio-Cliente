@@ -7,15 +7,21 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	justify-content: space-between;
 }
 
 #footer i {
 	color: black;
 }
+#footer p {
+	font-weight: 500;
+	margin: auto 1em;
+}
 .link__github {
 	text-decoration: none;
 }
 span {
+	margin-left: .2em;
 	color: #d6f7dc;
 	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
