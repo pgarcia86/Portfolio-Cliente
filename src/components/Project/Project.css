@@ -92,7 +92,11 @@ h4 {
 	margin: auto;
 	margin-top: 1em;
 }
-
+.link__repo {
+	text-decoration: none;
+	color: #D6F7DC;
+	font-weight: 600;
+}
 @media (min-width: 60rem) {
 	.imageDetail {
 		height: 25em;

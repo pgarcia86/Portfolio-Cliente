@@ -94,6 +94,9 @@ body {
 	.navbar-nav {
 		margin-top: auto;
 	}
+	.form__input {
+		width: 28em;
+	}
 }
 @media (min-width: 88rem) {
 	.app {

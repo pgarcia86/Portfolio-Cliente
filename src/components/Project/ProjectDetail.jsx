@@ -138,6 +138,8 @@ export default function ProjectDetail({
 						<div className='card__body'>
 							<h4>{project.title}</h4>
 							<p>{project.description}</p>
+							
+							<p>{project.secDescription}</p>
 						</div>
 						<div className='card__img'>
 							<img
@@ -145,7 +147,7 @@ export default function ProjectDetail({
 								className='card-img-bottom imageDetail'
 								alt={'This is the image of the project :' + project.title}
 							/>
-							<Link to={project.urlGit}>Link al repositorio !</Link>
+							<Link className='link__repo' to={project.urlGit}>Link al repositorio !</Link>
 						</div>
 					</div>
 

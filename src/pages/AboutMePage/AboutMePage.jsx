@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import Footer from '../../components/Footer/Footer';
+import { Link } from 'react-router-dom';
 import './AboutMe.css';
 import '../../App.css';
 
@@ -39,9 +40,12 @@ export default function AboutMePage({ handleIsntHome, isntHome, setIsntHome }) {
 				<div className='img__div'>
 					<img
 						className='img__me'
-						src='https://res.cloudinary.com/dbld4vcec/image/upload/v1680618741/projects/eugenio_k0f3gz.jpg'
+						src='https://res.cloudinary.com/dbld4vcec/image/upload/v1680779992/projects/eugenioPortfolio_k13tul.jpg'
 						alt='Profile image of Eugenio Giménez'
 					/>
+					<h5>Contact:</h5>
+					<p>e.o.gimenez@gmail.com</p>
+					<Link className='link__cv'><p>Check my CV</p></Link>
 				</div>
 			</div>
 			<div id='my__techs'>

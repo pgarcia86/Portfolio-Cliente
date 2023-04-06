@@ -13,21 +13,21 @@ export default function EditProject({
 	const [form, setForm] = useState({
 		title: project.title,
 		description: project.description,
+		secDescription: project.secDescription,
 		urlGit: project.urlGit,
 		technologies: [...project.technologies],
 		ownCode: '',
 	});
 	const [beat, setBeat] = useState(' ');
-
+	const [message, setMessage] = useState('You can only create new project if have an owner code');
 	const [technologies, setTechnologies] = useState([...form.technologies]);
 	const [image, setImage] = useState(project.image);
-	const [techAux, setTechAux] = useState('');
+	const [techAux, setTechAux] = useState([]);
 	const projectService = new ProjectsService();
 
 	const handleTech = (e) => {
 		e.preventDefault();
 		setTechnologies([...technologies, techAux]);
-		setTechAux('');
 	};
 
 	const handleFileUpload = (e) => {
@@ -42,18 +42,35 @@ export default function EditProject({
 	};
 	const submitHandler = (e) => {
 		e.preventDefault();
+		if (
+			!form.title ||
+			!form.description ||
+			!form.secDescription ||
+			!technologies ||
+			!form.urlGit ||
+			!image ||
+			!form.ownCode
+		) {
+			setMessage('Please complete all fields !');
+			return;
+		}
 		projectService
 			.editProject(project._id, {
 				title: form.title,
 				description: form.description,
+				secDescription: form.secDescription,
 				technologies: technologies,
 				urlGit: form.urlGit,
 				ownCode: form.ownCode,
 				image,
 			})
-			.then((response) => {
+			.then((result) => {
+				if (result.data.messageError) {
+					setMessage(result.data.messageError);
+					return;
+				}
 				setSomethingChange(!somethingChange);
-				handleClick(!showDetail, response);
+				handleClick(!showDetail, result);
 			})
 			.catch((err) => console.log(err));
 	};
@@ -80,7 +97,7 @@ export default function EditProject({
 			</div>
 
 			<div id='newProject'>
-				<form onSubmit={submitHandler}>
+				<form className='form__input' onSubmit={submitHandler}>
 					<div className='alert alert-primary d-flex align-items-center' role='alert'>
 						<svg
 							xmlns='http://www.w3.org/2000/svg'
@@ -91,7 +108,7 @@ export default function EditProject({
 						>
 							<path d='M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z' />
 						</svg>
-						<div>You can only create new project if have an owner code</div>
+						<div>{message}</div>
 					</div>
 					<div className='form-floating mb-3'>
 						<input
@@ -115,7 +132,18 @@ export default function EditProject({
 						></textarea>
 						<label htmlFor='description'>Description</label>
 					</div>
-					<select className='form-select form-select-lg mb-3' aria-label='.form-select-lg tech'>
+					<div className='form-floating mb-3'>
+						<textarea
+							className='form-control'
+							placeholder='Leave a comment here'
+							id='secDescription'
+							style={{ height: '100px' }}
+							value={form.secDescription}
+							onChange={(e) => setForm({ ...form, secDescription: e.target.value })}
+						></textarea>
+						<label htmlFor='secDescription'>Aditional Description</label>
+					</div>
+					{/* 	<select className='form-select form-select-lg mb-3' aria-label='.form-select-lg tech'>
 						<option value='tech'>Select Tech</option>
 						{technologies.map((tech, i) => {
 							return (
@@ -124,7 +152,7 @@ export default function EditProject({
 								</option>
 							);
 						})}
-					</select>
+					</select> */}
 					{/* 	<div className='form-floating mb-3'>
 						<input
 							type='text'
@@ -174,22 +202,44 @@ export default function EditProject({
 						Edit Project
 					</button>
 				</form>
-				<form className='tech__form' onSubmit={() => deleteTechHandler(i)}>
-					<div className='form-floating mb-3'>
-						<input
-							type='text'
-							className='form-control'
-							id='technologiesArr'
-							placeholder='name@example.com'
-							value={techAux}
-							onChange={(e) => setTechAux(e.target.value)}
-						/>
-						<label htmlFor='technologiesArr'>Technologies</label>
-					</div>
+				<form className='tech__form' onSubmit={handleTech}>
+					{technologies.map((tech, i) => {
+						return (
+							<div key={i} className='form-floating mb-3'>
+								<input
+									type='text'
+									className='form-control'
+									id={'editTech' + i}
+									placeholder='name@example.com'
+									value={tech}
+									onChange={(e) => setTechAux([...tech, e.target.value])}
+								/>
+								<label htmlFor={'editTech' + i}>Technologies</label>
+							</div>
+						);
+					})}
 					<button type='submit' className='btn'>
-						Add Tech
+						Refresh Techs
 					</button>
 				</form>
+				{/* 		{technologies === 0 && (
+					<form className='tech__form' onSubmit={handleTech}>
+						<div className='form-floating mb-3'>
+							<input
+								type='text'
+								className='form-control'
+								id='technologiesArr'
+								placeholder='name@example.com'
+								value={techAux}
+								onChange={(e) => setTechAux(e.target.value)}
+							/>
+							<label htmlFor='technologiesArr'>Technologies</label>
+						</div>
+						<button type='submit' className='btn'>
+							Add Tech
+						</button>
+					</form>
+				)} */}
 			</div>
 		</div>
 	);

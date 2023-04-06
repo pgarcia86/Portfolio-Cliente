@@ -9,22 +9,31 @@ p {
 	text-align: center;
 }
 h2,
-h3 {
+h3,
+h5 {
 	text-align: center;
 	margin-bottom: 0.5em;
 }
 h3 {
 	margin-bottom: 2em;
 }
-
+.link__cv {
+	text-decoration: none;
+	color: white;
+}
 .img__div {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
+	align-items: center;
 }
-
+.img__div p {
+	margin: auto;
+}
 .img__me {
 	width: 20em;
 	border-radius: 20px;
+	clip-path: circle(140px);
 }
 
 .tech__logo {
@@ -42,6 +51,7 @@ h3 {
 	.img__me {
 		height: 35em;
 		width: auto;
+		clip-path: circle(225px);
 	}
 	.tech__logo {
 		height: 5em;
@@ -56,7 +66,7 @@ h3 {
 	#profile {
 		margin: 2em;
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: repeat(2, 2fr);
 		gap: 2em;
 	}
 }
