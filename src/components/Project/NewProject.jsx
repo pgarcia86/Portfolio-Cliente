@@ -41,13 +41,13 @@ export default function NewProject({
 	const submitHandler = (e) => {
 		e.preventDefault();
 		if (
-			form.title === '' ||
-			form.description === '' ||
-			form.secDescription === '' ||
-			technologies === '' ||
-			form.urlGit === '' ||
-			image === '' ||
-			form.ownCode === ''
+			!form.title ||
+			!form.description ||
+			!form.secDescription ||
+			!technologies ||
+			!form.urlGit ||
+			!image ||
+			!form.ownCode
 		) {
 			setMessage('Please complete all fields !');
 			return;

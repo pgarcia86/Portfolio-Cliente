@@ -28,6 +28,6 @@ export default class ProjectsService {
 	}
 
 	uploadFile(file) {
-		return axios.post(`${this.API_URL}/projects/upload`, file);
+		return axios.post(`https://portfolio-eogimenez.fly.dev/api/projects/upload`, file);
 	}
 }
