@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export default class ProjectsService {
 	constructor() {
-		this.API_URL = 'http://localhost:5005/api';
+		this.API_URL = process.env.API_URL;
 	}
 
 	getProjects() {
