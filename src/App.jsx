@@ -8,7 +8,7 @@ import NewProject from './components/Project/NewProject';
 import Footer from './components/Footer/Footer';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 import ProjectIdPage from './pages/ProjectIdPage/ProjectIdPage';
-import AboutMePage from './pages/AboutmePage/AboutMePage';
+import AboutMePage from './pages/AboutMePage/AboutMePage'
 
 function App() {
 	const { projects, getProjects } = useContext(projectsContext);
