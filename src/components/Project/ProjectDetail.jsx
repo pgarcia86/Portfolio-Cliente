@@ -126,7 +126,7 @@ export default function ProjectDetail({
 							onMouseLeave={() => setBeat({ ...beat, share: ' ' })}
 							onClick={handleShare}
 						>
-							<CopyToClipboard text={'http://localhost:3000/' + project._id}>
+							<CopyToClipboard text={'https://portfolio-eogimenez.fly.dev/api/projects/' + project._id}>
 								<i
 									className={
 										'fa-regular fa-share-from-square fa-xl' + beat.share
