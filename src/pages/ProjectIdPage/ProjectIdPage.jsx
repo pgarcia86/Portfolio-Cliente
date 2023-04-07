@@ -8,7 +8,6 @@ import '../../components/Project/Project.css';
 import EditProject from '../../components/Project/EditProject';
 
 export default function ProjectIdPage({
-	projects,
 	handleIsntHome,
 	isntHome,
 	setSomethingChange,
@@ -18,7 +17,6 @@ export default function ProjectIdPage({
 	handleClick,
 }) {
 	const { projectId } = useParams();
-	console.log("ID",projectId)
 	const [project, setProject] = useState('');
 	const [modal, setModal] = useState(false);
 	const [modalShare, setModalShare] = useState(false);
@@ -32,18 +30,13 @@ export default function ProjectIdPage({
 	});
 	const [ownCode, setOwnCode] = useState('');
 	const projectService = new ProjectsService();
-
-	useEffect(() => {
+	useEffect(()=> {
 		setIsntHome(true);
-		projectService.getOneProject(projectId).then((response) => {
-			console.log("respuesta",response)
-			setProject(response)
-		});
-	}, []);
-	/* useEffect(() => {
-		const search = projects.find((proj) => proj._id === projectId);
-		setProject(search);
-	}, [projects]); */
+		projectService.getOneProject(projectId)
+		.then(result => {
+			setProject(result.data)
+		})
+	}, [])
 
 	const handleModal = () => {
 		setModal(true);
