@@ -2,7 +2,7 @@ import './Project.css';
 
 export default function ProjectCard({ project, handleClick, showDetail }) {
 	return (
-		<div className="testHover">
+		<div className="cardContainer">
 			{!showDetail && (
 				<div
 					className="projectCard"

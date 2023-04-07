@@ -20,6 +20,14 @@ h3 {
 .link__cv {
 	text-decoration: none;
 	color: white;
+	cursor: pointer;
+	background-color: #6c63ff;
+	padding: .8em 2em;
+	border-radius: 12px;
+	font-weight: 500;
+}
+.link__cv:hover {
+	background-color: #7872eb
 }
 .img__div {
 	display: flex;

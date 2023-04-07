@@ -7,10 +7,10 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 createRoot(document.getElementById('app')).render(
 	<React.StrictMode>
-		<Router>
 			<ProjectsProviderWrapper>
+		<Router>
 				<App />
-			</ProjectsProviderWrapper>
 		</Router>
+			</ProjectsProviderWrapper>
 	</React.StrictMode>
 );

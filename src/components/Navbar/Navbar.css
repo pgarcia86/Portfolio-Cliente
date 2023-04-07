@@ -14,6 +14,7 @@
 .newProject,
 .nav-link {
 	color: #d6f7dc;
+	cursor: pointer;
 }
 
 .about__me:hover,

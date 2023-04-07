@@ -8,16 +8,14 @@ body {
 	position: relative;
 	padding-bottom: 3.4em;
 }
-
 .alertImagen {
 	height: 1.2em;
 }
-
 .app {
 	display: grid;
 	grid-auto-flow: row;
 	gap: 1em;
-	margin: 2em 2em 0 2em;
+	margin: 2em;
 }
 .projectDetail {
 	margin: auto;
@@ -26,7 +24,6 @@ body {
 	width: 90vw;
 	min-height: 85vh;
 }
-
 #newProject {
 	display: grid;
 	grid-template-columns: repeat(1, 1fr);
@@ -48,12 +45,10 @@ body {
 .modal {
 	color: black;
 }
-
 .modal__btn {
 	background-color: white;
 	border: none;
 }
-
 .tech__form {
 	display: flex;
 	flex-direction: column;
@@ -63,7 +58,6 @@ body {
 	width: 40em;
 	height: 35em;
 }
-
 .cardDetail > div {
 	margin: 1em 1em 0 1em;
 	padding: 0;
@@ -85,17 +79,12 @@ body {
 		color: #6c63ff;
 	}
 	.projectCard {
-		max-width: 28em;
 		margin: auto;
-		opacity: 1;
 	}
-
-	.testHover:not(.projectCard:hover) > :not(:hover) {
-		opacity: 0.6;
+	.projectCard:hover {
+		border-inline: solid;
+		border-radius: 12px;
 	}
-	/* .projectCard > :not(:hover) {
-		opacity: 0.5;
-	} */
 	.navbar-nav {
 		margin-top: auto;
 	}
