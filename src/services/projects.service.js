@@ -2,32 +2,32 @@ import axios from 'axios';
 
 export default class ProjectsService {
 	constructor() {
-		this.API_URL = process.env.REACT_APP_API_URL;
+		this.API_URL = import.meta.env.VITE_API_URL;
 	}
 
 	getProjects() {
-		return axios.get(`https://portfolio-eogimenez.fly.dev/api/projects`);
+		return axios.get(`${this.API_URL}`);
 	}
 
 	getOneProject(projId) {
-		return axios.get(`https://portfolio-eogimenez.fly.dev/api/projects/${projId}`);
+		return axios.get(`${this.API_URL}/${projId}`);
 	}
 
 	addProject(project) {
-		return axios.post(`https://portfolio-eogimenez.fly.dev/api/projects/new`, project);
+		return axios.post(`${this.API_URL}/new`, project);
 	}
 
 	editProject(projId, project) {
-		return axios.put(`https://portfolio-eogimenez.fly.dev/api/projects/${projId}/edit`, project);
+		return axios.put(`${this.API_URL}/${projId}/edit`, project);
 	}
 
 	deleteProject(projId, ownCode) {
-		return axios.delete(`https://portfolio-eogimenez.fly.dev/api/projects/${projId}/delete`, {
+		return axios.delete(`${this.API_URL}/${projId}/delete`, {
 			data: ownCode,
 		});
 	}
 
 	uploadFile(file) {
-		return axios.post(`https://portfolio-eogimenez.fly.dev/api/projects/upload`, file);
+		return axios.post(`${this.API_URL}/upload`, file);
 	}
 }
