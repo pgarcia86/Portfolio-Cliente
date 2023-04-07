@@ -141,7 +141,7 @@ export default function ProjectIdPage({
 								onMouseLeave={() => setBeat({ ...beat, share: ' ' })}
 								onClick={handleShare}
 							>
-								<CopyToClipboard text={'https://portfolio-eogimenez.fly.dev/api/projects/' + project._id}>
+								<CopyToClipboard text={'https://portfolio-eogimenez.netlify.app/' + project._id}>
 									<i
 										className={
 											'fa-regular fa-share-from-square fa-xl' + beat.share
