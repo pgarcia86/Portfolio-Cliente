@@ -1,97 +1,97 @@
 #profile {
-	margin: 1em;
-	display: grid;
-	grid-template-columns: repeat(1, 2fr);
-	gap: 2em;
-	color: white;
+  margin: 1em;
+  display: grid;
+  grid-template-columns: repeat(1, 2fr);
+  gap: 2em;
+  color: white;
 }
 .profile__me p {
-	text-align: center;
-	max-width: 30em;
-	margin: 0.7em auto;
+  text-align: center;
+  max-width: 30em;
+  margin: 0.7em auto;
 }
 h2,
 h3,
 h5 {
-	text-align: center;
-	margin-bottom: 0.5em;
+  text-align: center;
+  margin-bottom: 0.5em;
 }
 h3 {
-	margin-bottom: 2em;
+  margin-bottom: 2em;
 }
 .link__cv {
-	text-decoration: none;
-	color: white;
-	cursor: pointer;
-	background-color: #6c63ff;
-	padding: 0.8em 2em;
-	border-radius: 12px;
-	font-weight: 500;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  background-color: #6c63ff;
+  padding: 0.8em 2em;
+  border-radius: 12px;
+  font-weight: 500;
 }
 .link__cv:hover {
-	background-color: #7872eb;
+  background-color: #7872eb;
 }
 .img__div {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .img__div p {
-	margin: auto;
+  margin: auto;
 }
 .img__me {
-	width: 20em;
-	clip-path: circle(140px);
+  width: 20em;
+  clip-path: circle(140px);
 }
 
 .tech__logo {
-	height: 4em;
+  height: 4em;
 }
 
 #my__techs {
-	margin: 0 1.2em;
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	gap: 0.5em;
+  margin: 0 1.2em;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5em;
 }
 
 @media (orientation: landscape) {
-	p {
-		max-width: 23em;
-		margin: auto;
-	}
+  p {
+    max-width: 23em;
+    margin: auto;
+  }
 }
 
 @media (min-width: 44em) {
-	.img__me {
-		height: 35em;
-		width: auto;
-		clip-path: circle(225px);
-		margin-right: 2em;
-	}
-	.tech__logo {
-		height: 5em;
-		margin: 0 2em;
-	}
-	#my__techs {
-		display: grid;
-		grid-template-columns: repeat(15, 1fr);
-		gap: 0.4em;
-		margin: 0 2em;
-	}
-	.profile__me p {
-		max-width: 40em;
-	}
+  .img__me {
+    height: 35em;
+    width: auto;
+    clip-path: circle(225px);
+    margin-right: 2em;
+  }
+  .tech__logo {
+    height: 5em;
+    margin: 0 2em;
+  }
+  #my__techs {
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    gap: 0.4em;
+    margin: 0 2em;
+  }
+  .profile__me p {
+    max-width: 40em;
+  }
 }
 @media (min-width: 60em) {
-	#profile {
-		margin: 2em;
-		display: grid;
-		grid-template-columns: repeat(2, 2fr);
-		gap: 2em;
-	}
-	.my__techs {
-		margin: 0 3em;
-	}
+  #profile {
+    margin: 2em;
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 2em;
+  }
+  .my__techs {
+    margin: 0 3em;
+  }
 }

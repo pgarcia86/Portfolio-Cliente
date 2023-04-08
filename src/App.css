@@ -1,101 +1,101 @@
 body {
-	background-color: #333070;
-	background-image: url(https://res.cloudinary.com/dbld4vcec/image/upload/v1680017466/projects/alex-padurariu-tXYg4Zx7kSU-unsplash_pjlitu.jpg);
-	color: #d6f7dc;
-	background-blend-mode: multiply;
-	background-size: cover;
-	min-height: 100vh;
-	position: relative;
-	padding-bottom: 3.4em;
+  background-color: #333070;
+  background-image: url(https://res.cloudinary.com/dbld4vcec/image/upload/v1680017466/projects/alex-padurariu-tXYg4Zx7kSU-unsplash_pjlitu.jpg);
+  color: #d6f7dc;
+  background-blend-mode: multiply;
+  background-size: cover;
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 3.4em;
 }
 .alertImagen {
-	height: 1.2em;
+  height: 1.2em;
 }
 .app {
-	display: grid;
-	grid-auto-flow: row;
-	margin: 2em;
+  display: grid;
+  grid-auto-flow: row;
+  margin: 2em;
 }
 .projectDetail {
-	margin: auto;
-	display: flex;
-	justify-content: center;
-	width: 100%;
-	min-height: 85vh;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 85vh;
 }
 #newProject {
-	display: grid;
-	grid-template-columns: repeat(1, 1fr);
-	width: auto;
-	padding: 2em;
-	gap: 2em;
-	color: #6c63ff;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  width: auto;
+  padding: 2em;
+  gap: 2em;
+  color: #6c63ff;
 }
 .btn {
-	background-color: #6c63ff;
-	font-weight: 500;
-	max-width: 200px;
-	transition: 0.8s;
+  background-color: #6c63ff;
+  font-weight: 500;
+  max-width: 200px;
+  transition: 0.8s;
 }
 .btn:hover {
-	background-color: #f7d6dc;
+  background-color: #f7d6dc;
 }
 
 .modal {
-	color: black;
+  color: black;
 }
 .modal__btn {
-	background-color: white;
-	border: none;
+  background-color: white;
+  border: none;
 }
 .tech__form {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .navbar-nav {
-	margin-top: 1em;
+  margin-top: 1em;
 }
 .projectCard:hover {
-	border-inline: solid;
-	border-radius: 12px;
+  border-inline: solid;
+  border-radius: 12px;
 }
 .projectCard:hover .card__project::after,
 .projectCard:hover .card__link {
-	opacity: 1;
+  opacity: 1;
 }
 
 @media (min-width: 60rem) {
-	.app {
-		grid-template-columns: repeat(2, 1fr);
-	}
-	#newProject {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		width: auto;
-		padding: 2em;
-		gap: 2em;
-		color: #6c63ff;
-	}
-	.projectCard {
-		margin: auto;
-	}
+  .app {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #newProject {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: auto;
+    padding: 2em;
+    gap: 2em;
+    color: #6c63ff;
+  }
+  .projectCard {
+    margin: auto;
+  }
 
-	.navbar-nav {
-		margin-top: auto;
-	}
-	.form__input {
-		width: 28em;
-	}
+  .navbar-nav {
+    margin-top: auto;
+  }
+  .form__input {
+    width: 28em;
+  }
 }
 @media (min-width: 88rem) {
-	.app {
-		grid-template-columns: repeat(3, 1fr);
-		gap: 1em;
-	}
+  .app {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+  }
 }
 @media (min-width: 100rem) {
-	.app {
-		grid-template-columns: repeat(3, 1fr);
-	}
+  .app {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

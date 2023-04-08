@@ -1,41 +1,41 @@
 .background {
-	margin: 0 2em;
-	border: solid 2px #ff6c7f;
-	max-width: 95vw;
-	border-top: none;
+  margin: 0 2em;
+  border: solid 2px #ff6c7f;
+  max-width: 95vw;
+  border-top: none;
 }
 
 .navbar__display {
-	display: flex;
-	justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .about__me,
 .newProject,
 .nav-link {
-	color: #d6f7dc;
-	cursor: pointer;
+  color: #d6f7dc;
+  cursor: pointer;
 }
 
 .about__me:hover,
 .newProject:hover,
 .nav-link:hover {
-	color: #d6f7dc;
-	text-shadow: 0 5px 15px #ff6c7f;
+  color: #d6f7dc;
+  text-shadow: 0 5px 15px #ff6c7f;
 }
 
 .linkedIn {
-	margin-right: 45px;
+  margin-right: 45px;
 }
 .nav-link {
-	display: flex;
-	gap: 0.3em;
+  display: flex;
+  gap: 0.3em;
 }
 .navbar-nav li {
-	margin: 0.2em 0.5em;
-	font-size: 1.2em;
-	font-weight: 500;
+  margin: 0.2em 0.5em;
+  font-size: 1.2em;
+  font-weight: 500;
 }
 .navbar-nav li p {
-	margin: auto;
+  margin: auto;
 }
