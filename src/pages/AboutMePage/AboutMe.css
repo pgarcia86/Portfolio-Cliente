@@ -5,10 +5,10 @@
 	gap: 2em;
 	color: white;
 }
-p {
+.profile__me p {
 	text-align: center;
 	max-width: 30em;
-	margin: auto;
+	margin: 0.7em auto;
 }
 h2,
 h3,
@@ -24,12 +24,12 @@ h3 {
 	color: white;
 	cursor: pointer;
 	background-color: #6c63ff;
-	padding: .8em 2em;
+	padding: 0.8em 2em;
 	border-radius: 12px;
 	font-weight: 500;
 }
 .link__cv:hover {
-	background-color: #7872eb
+	background-color: #7872eb;
 }
 .img__div {
 	display: flex;
@@ -80,7 +80,7 @@ h3 {
 		gap: 0.4em;
 		margin: 0 2em;
 	}
-	p {
+	.profile__me p {
 		max-width: 40em;
 	}
 }
