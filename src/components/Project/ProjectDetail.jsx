@@ -13,10 +13,10 @@ export default function ProjectDetail({
 	somethingChange,
 }) {
 	const [modal, setModal] = useState(false);
-	const [modalShare, setModalShare] = useState('');
 	const [ownCode, setOwnCode] = useState('');
 	const [deleteMessage, setDeleteMessage] = useState('');
 	const [isEdit, setIsEdit] = useState(false);
+	const [opacity, setOpacity] = useState(' ');
 	const [beat, setBeat] = useState({
 		back: '',
 		share: '',
@@ -29,11 +29,10 @@ export default function ProjectDetail({
 	const handleModal = () => {
 		setModal(true);
 	};
-
 	const handleShare = () => {
-		setModalShare('Url copied to clipboard');
+		setOpacity('opacity');
 		setTimeout(() => {
-			setModalShare('');
+			setOpacity(' ');
 		}, 5000);
 	};
 
@@ -101,7 +100,7 @@ export default function ProjectDetail({
 					</div>
 				</div>
 			)}
-			{modalShare && <h4 className='share__message'>{modalShare}</h4>}
+			<h4 className={'share__message ' + opacity}>Url copied to clipboard</h4>
 			{!isEdit && (
 				<div id='projectDetail'>
 					<div className='iconos'>
@@ -117,8 +116,6 @@ export default function ProjectDetail({
 						</div>
 						<div
 							className='eachIcon'
-							data-bs-toggle='modal'
-							data-bs-target='#shareModal'
 							onMouseEnter={() => setBeat({ ...beat, share: ' fa-beat-fade' })}
 							onMouseLeave={() => setBeat({ ...beat, share: ' ' })}
 							onClick={handleShare}
