@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-import ModaleShare from '../../components/ModalShare/ModalShare';
 import Footer from '../../components/Footer/Footer';
 import ProjectsService from '../../services/projects.service';
+import '../../App.css';
 import '../../components/Project/Project.css';
 import EditProject from '../../components/Project/EditProject';
 
@@ -27,23 +27,27 @@ export default function ProjectIdPage({
 		share: '',
 		edit: '',
 		delete: '',
+		bounce: 'fa-brands fa-github fa-xl',
 	});
 	const [ownCode, setOwnCode] = useState('');
 	const projectService = new ProjectsService();
-	useEffect(()=> {
+
+	useEffect(() => {
 		setIsntHome(true);
-		projectService.getOneProject(projectId)
-		.then(result => {
-			setProject(result.data)
-		})
-	}, [])
+		projectService.getOneProject(projectId).then((result) => {
+			setProject(result.data);
+		});
+	}, []);
 
 	const handleModal = () => {
 		setModal(true);
 	};
 
 	const handleShare = () => {
-		setModalShare(!modalShare);
+		setModalShare('Url copied to clipboard');
+		setTimeout(() => {
+			setModalShare('');
+		}, 5000);
 	};
 
 	const deleteHandler = (e) => {
@@ -110,9 +114,9 @@ export default function ProjectIdPage({
 					</div>
 				</div>
 			)}
-			{modalShare && <ModaleShare />}
 			{project && !isEdit && (
 				<div className='projectDetail'>
+					{modalShare && <h4 className='share__message'>{modalShare}</h4>}
 					<div id='projectDetail'>
 						<div className='iconos'>
 							<div
@@ -127,8 +131,6 @@ export default function ProjectIdPage({
 							</div>
 							<div
 								className='eachIcon'
-								data-bs-toggle='modal'
-								data-bs-target='#shareModal'
 								onMouseEnter={() => setBeat({ ...beat, share: ' fa-beat-fade' })}
 								onMouseLeave={() => setBeat({ ...beat, share: ' ' })}
 								onClick={handleShare}
@@ -173,7 +175,32 @@ export default function ProjectIdPage({
 								<div>{deleteMessage}</div>
 							</div>
 						)}
-						<div className='CardDetail'>
+						<div className='cardDetail'>
+							<div className='card__body'>
+								<h4>{project.title}</h4>
+								<p>{project.description}</p>
+								<p>{project.secDescription}</p>
+							</div>
+							<div className='card__img'>
+								<img
+									src={project.image}
+									className='card-img-bottom imageDetail'
+									alt={'This is the image of the project :' + project.title}
+								/>
+								<Link
+									className='link__repo'
+									to={project.urlGit}
+									onMouseEnter={() =>
+										setBeat({ ...beat, bounce: 'fa-brands fa-github fa-xl fa-bounce' })
+									}
+									onMouseLeave={() => setBeat({ ...beat, bounce: 'fa-brands fa-github fa-xl' })}
+									target='_blank'
+								>
+									<i className={beat.bounce}></i> Repositorio
+								</Link>
+							</div>
+						</div>
+						{/* 	<div className='CardDetail'>
 							<div className='card__body'>
 								<h4>{project.title}</h4>
 								<p>{project.description}</p>
@@ -189,7 +216,7 @@ export default function ProjectIdPage({
 									Link al repositorio !
 								</Link>
 							</div>
-						</div>
+						</div> */}
 
 						<div className=' tech__print'>
 							{project.technologies.map((tech, i) => (
