@@ -33,7 +33,7 @@
 	text-align: center;
 	font-weight: 400;
 	color: white;
-	margin: .7em 0;
+	margin-top: .7em;
 }
 .tech__print {
 	display: flex;
@@ -186,8 +186,8 @@ h4 {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: 2em;
-		max-width: 95;
-		margin: auto;
+		max-width: 95vw;
+		margin: 0 5em;
 	}
 	.card__img {
 		display: flex;
@@ -198,7 +198,7 @@ h4 {
 	.card__body {
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
+		justify-content: start;
 	}
 	.tech__print {
 		gap: 1.5em;
@@ -208,5 +208,9 @@ h4 {
 	}
 	.share__message {
 		top: 5em;
+	}
+	.cardDetail p {
+		margin: .7em auto;
+		max-width: 35em;
 	}
 }
