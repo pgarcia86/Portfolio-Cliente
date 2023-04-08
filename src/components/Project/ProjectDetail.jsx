@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import ProjectsService from '../../services/projects.service';
-import ModaleShare from '../ModalShare/ModalShare';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { Link } from 'react-router-dom';
 import './Project.css';
@@ -14,7 +13,7 @@ export default function ProjectDetail({
 	somethingChange,
 }) {
 	const [modal, setModal] = useState(false);
-	const [modalShare, setModalShare] = useState(false);
+	const [modalShare, setModalShare] = useState('');
 	const [ownCode, setOwnCode] = useState('');
 	const [deleteMessage, setDeleteMessage] = useState('');
 	const [isEdit, setIsEdit] = useState(false);
@@ -23,6 +22,7 @@ export default function ProjectDetail({
 		share: '',
 		edit: '',
 		delete: '',
+		bounce: 'fa-brands fa-github fa-xl',
 	});
 	const projectService = new ProjectsService();
 
@@ -31,7 +31,10 @@ export default function ProjectDetail({
 	};
 
 	const handleShare = () => {
-		setModalShare(!modalShare);
+		setModalShare('Url copied to clipboard');
+		setTimeout(() => {
+			setModalShare('');
+		}, 5000);
 	};
 
 	const deleteHandler = (e) => {
@@ -98,7 +101,7 @@ export default function ProjectDetail({
 					</div>
 				</div>
 			)}
-			{modalShare && <ModaleShare />}
+			{modalShare && <h4 className='share__message'>{modalShare}</h4>}
 			{!isEdit && (
 				<div id='projectDetail'>
 					<div className='iconos'>
@@ -120,7 +123,7 @@ export default function ProjectDetail({
 							onMouseLeave={() => setBeat({ ...beat, share: ' ' })}
 							onClick={handleShare}
 						>
-							<CopyToClipboard text={'https://portfolio-eogimenez.netlify.app/'+project._id}>
+							<CopyToClipboard text={'https://portfolio-eogimenez.netlify.app/' + project._id}>
 								<i className={'fa-regular fa-share-from-square fa-xl' + beat.share}></i>
 							</CopyToClipboard>
 						</div>
@@ -157,7 +160,7 @@ export default function ProjectDetail({
 							<div>{deleteMessage}</div>
 						</div>
 					)}
-					<div className='CardDetail'>
+					<div className='cardDetail'>
 						<div className='card__body'>
 							<h4>{project.title}</h4>
 							<p>{project.description}</p>
@@ -169,8 +172,16 @@ export default function ProjectDetail({
 								className='card-img-bottom imageDetail'
 								alt={'This is the image of the project :' + project.title}
 							/>
-							<Link className='link__repo' to={project.urlGit} target='_blank'>
-								Link al repositorio !
+							<Link
+								className='link__repo'
+								to={project.urlGit}
+								onMouseEnter={() =>
+									setBeat({ ...beat, bounce: 'fa-brands fa-github fa-xl fa-bounce' })
+								}
+								onMouseLeave={() => setBeat({ ...beat, bounce: 'fa-brands fa-github fa-xl' })}
+								target='_blank'
+							>
+								<i className={beat.bounce}></i> Repositorio
 							</Link>
 						</div>
 					</div>

@@ -7,6 +7,8 @@
 }
 p {
 	text-align: center;
+	max-width: 30em;
+	margin: auto;
 }
 h2,
 h3,
@@ -54,19 +56,32 @@ h3 {
 	gap: 0.5em;
 }
 
+@media (orientation: landscape) {
+	p {
+		max-width: 23em;
+		margin: auto;
+	}
+}
+
 @media (min-width: 44em) {
 	.img__me {
 		height: 35em;
 		width: auto;
 		clip-path: circle(225px);
+		margin-right: 2em;
 	}
 	.tech__logo {
 		height: 5em;
+		margin: 0 2em;
 	}
 	#my__techs {
 		display: grid;
 		grid-template-columns: repeat(15, 1fr);
 		gap: 0.4em;
+		margin: 0 2em;
+	}
+	p {
+		max-width: 40em;
 	}
 }
 @media (min-width: 60em) {
@@ -75,5 +90,8 @@ h3 {
 		display: grid;
 		grid-template-columns: repeat(2, 2fr);
 		gap: 2em;
+	}
+	.my__techs {
+		margin: 0 3em;
 	}
 }

@@ -7,27 +7,33 @@
 	overflow: hiddenper;
 }
 .cardContainer {
+	margin: auto;
 	max-height: 22em;
 	max-width: 28em;
 	padding: 1em;
 	background-color: rgba(26, 148, 142, 0.4);
 	border-radius: 12px;
+	margin-bottom: 3em;
 }
 .truncate {
 	overflow: hidden;
 	display: -webkit-box;
-	-webkit-line-clamp: 5;
+	-webkit-line-clamp: 4;
 	-webkit-box-orient: vertical;
-	margin-top: 2em;
+	margin: 1em 0;
 }
 #projectDetail {
-	width: 100vw;
+	width: 100%;
 	display: grid;
 }
-.CardDetail p {
+.cardDetail {
+	margin-top: 2em;
+}
+.cardDetail p {
 	text-align: center;
 	font-weight: 400;
 	color: white;
+	margin: .7em 0;
 }
 .tech__print {
 	display: flex;
@@ -45,8 +51,9 @@
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	height: 2em;
-	margin-top: 1em;
+	margin: 1em 2em 0;
 	gap: 2em;
+	max-width: 95vw;
 }
 .eachIcon {
 	text-align: center;
@@ -103,29 +110,90 @@ h4 {
 }
 .link__repo {
 	text-decoration: none;
-	color: #d6f7dc;
-	font-weight: 600;
+	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	display: flex;
+	gap: .3em;
+	margin: .7em auto;
+	padding: .4em 1em;
+	background-color: black;
+	color: white;
+	max-width: 8em;
+	border-radius: 8px;
 }
 .code__error {
 	width: auto;
 	height: 3em;
 	margin: auto;
 }
+.card__link__p {
+	margin-top: 1em;
+}
+.card__link {
+	text-decoration: none;
+	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	opacity: 0;
+	transition: .4s;
+	display: flex;
+	gap: .3em;
+	margin: .7em auto;
+	padding: .3em .8em;
+	background-color: black;
+	color: white;
+	max-width: 8em;
+	border-radius: 8px;
+}
+
+.card__project::after {
+	content: '+ info';
+	opacity: 0;
+	transition: .4s;
+	margin: 0 auto;
+	background-color: #61dbfb;
+	padding: .3em .8em;
+	max-width: 8em;
+	border-radius: 8px;
+}
+.share__message {
+	position: absolute;
+	top: 4em;
+	color: #66ee5a;
+}
+
+@media ( hover: none) {
+	.projectCard .card__project::after,
+	.projectCard .card__link {
+		opacity: 1;
+	}
+	.projectCard {
+		border-inline: solid;
+		border-radius: 12px;
+	}
+}
+
+@media (orientation: landscape) and (max-wid: 40em) {
+	.cardContainer{
+		max-width: 22em;	
+	} 
+}
+
 @media (min-width: 60rem) {
 	.imageDetail {
 		height: 25em;
 		width: auto;
 		margin: auto;
 	}
-	.CardDetail {
+	.cardDetail {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: 2em;
+		max-width: 95;
+		margin: auto;
 	}
 	.card__img {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		gap: 1em;
 	}
 	.card__body {
 		display: flex;
@@ -137,5 +205,8 @@ h4 {
 	}
 	.truncate {
 		padding: 0 1.3em;
+	}
+	.share__message {
+		top: 5em;
 	}
 }

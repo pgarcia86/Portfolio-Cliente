@@ -14,14 +14,13 @@ body {
 .app {
 	display: grid;
 	grid-auto-flow: row;
-	gap: 1em;
 	margin: 2em;
 }
 .projectDetail {
 	margin: auto;
 	display: flex;
 	justify-content: center;
-	width: 90vw;
+	width: 100%;
 	min-height: 85vh;
 }
 #newProject {
@@ -54,16 +53,16 @@ body {
 	flex-direction: column;
 	justify-content: center;
 }
-.cardDetail {
-	width: 40em;
-	height: 35em;
-}
-.cardDetail > div {
-	margin: 1em 1em 0 1em;
-	padding: 0;
-}
 .navbar-nav {
 	margin-top: 1em;
+}
+.projectCard:hover {
+	border-inline: solid;
+	border-radius: 12px;
+}
+.projectCard:hover .card__project::after,
+.projectCard:hover .card__link {
+	opacity: 1;
 }
 
 @media (min-width: 60rem) {
@@ -81,10 +80,7 @@ body {
 	.projectCard {
 		margin: auto;
 	}
-	.projectCard:hover {
-		border-inline: solid;
-		border-radius: 12px;
-	}
+
 	.navbar-nav {
 		margin-top: auto;
 	}
@@ -95,6 +91,7 @@ body {
 @media (min-width: 88rem) {
 	.app {
 		grid-template-columns: repeat(3, 1fr);
+		gap: 1em;
 	}
 }
 @media (min-width: 100rem) {
