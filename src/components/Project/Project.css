@@ -33,7 +33,7 @@
 	text-align: center;
 	font-weight: 400;
 	color: white;
-	margin-top: .7em;
+	margin-top: 0.7em;
 }
 .tech__print {
 	display: flex;
@@ -112,9 +112,9 @@ h4 {
 	text-decoration: none;
 	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 	display: flex;
-	gap: .3em;
-	margin: .7em auto;
-	padding: .4em 1em;
+	gap: 0.3em;
+	margin: 0.7em auto;
+	padding: 0.4em 1em;
 	background-color: black;
 	color: white;
 	max-width: 8em;
@@ -132,11 +132,11 @@ h4 {
 	text-decoration: none;
 	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 	opacity: 0;
-	transition: .4s;
+	transition: 0.4s;
 	display: flex;
-	gap: .3em;
-	margin: .7em auto;
-	padding: .3em .8em;
+	gap: 0.3em;
+	margin: 0.7em auto;
+	padding: 0.3em 0.8em;
 	background-color: black;
 	color: white;
 	max-width: 8em;
@@ -146,20 +146,28 @@ h4 {
 .card__project::after {
 	content: '+ info';
 	opacity: 0;
-	transition: .4s;
+	transition: 0.4s;
 	margin: 0 auto;
 	background-color: #61dbfb;
-	padding: .3em .8em;
+	padding: 0.3em 0.8em;
 	max-width: 8em;
 	border-radius: 8px;
 }
 .share__message {
 	position: absolute;
 	top: 4em;
-	color: #66ee5a;
+	color: white;
+	background-color: black;
+	padding: 0.3em 0.8em;
+	border-radius: 8px;
+	transition: 0.5s;
+	opacity: 0;
+}
+.opacity {
+	opacity: 1;
 }
 
-@media ( hover: none) {
+@media (hover: none) {
 	.projectCard .card__project::after,
 	.projectCard .card__link {
 		opacity: 1;
@@ -171,9 +179,9 @@ h4 {
 }
 
 @media (orientation: landscape) and (max-wid: 40em) {
-	.cardContainer{
-		max-width: 22em;	
-	} 
+	.cardContainer {
+		max-width: 22em;
+	}
 }
 
 @media (min-width: 60rem) {
@@ -210,7 +218,7 @@ h4 {
 		top: 5em;
 	}
 	.cardDetail p {
-		margin: .7em auto;
+		margin: 0.7em auto;
 		max-width: 35em;
 	}
 }
