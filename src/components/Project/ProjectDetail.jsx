@@ -33,7 +33,7 @@ export default function ProjectDetail({
     setOpacity('opacity');
     setTimeout(() => {
       setOpacity(' ');
-    }, 5000);
+    }, 4000);
   };
 
   const deleteHandler = (e) => {

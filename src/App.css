@@ -64,6 +64,9 @@ body {
 .projectCard:hover .card__link {
   opacity: 1;
 }
+.button__style {
+  opacity: 0;
+}
 
 @media (min-width: 60rem) {
   .app {
@@ -87,6 +90,15 @@ body {
   .form__input {
     width: 28em;
   }
+/*   .button__style {
+    opacity: 1;
+    height: 1.5em;
+    max-width: 95vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  } */
 }
 @media (min-width: 88rem) {
   .app {

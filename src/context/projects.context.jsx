@@ -12,7 +12,7 @@ function ProjectsProviderWrapper({ children }) {
     projectsService
       .getProjects()
       .then((result) => {
-        setProjects(result.data.response);
+        setProjects(result.data.response.reverse());
       })
       .catch((err) => console.log(err));
   };
