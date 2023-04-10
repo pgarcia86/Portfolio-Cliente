@@ -1,7 +1,7 @@
 .projectCard {
   height: 20em;
   text-align: center;
-  color: white;
+  color: antiquewhite;
   cursor: pointer;
   padding: 1em;
   overflow: hiddenper;
@@ -11,7 +11,7 @@
   max-height: 22em;
   max-width: 28em;
   padding: 1em;
-  background-color: rgba(26, 148, 142, 0.4);
+  background-color: rgba(0, 0, 0, 0.4);
   border-radius: 12px;
   margin-bottom: 3em;
 }
@@ -27,12 +27,13 @@
   display: grid;
 }
 .cardDetail {
-  margin-top: 2em;
+  max-width: 95vw;
+  margin: auto;
 }
 .cardDetail p {
   text-align: center;
   font-weight: 400;
-  color: white;
+  color: antiquewhite;
   margin-top: 0.7em;
 }
 .tech__print {
@@ -59,16 +60,24 @@
   text-align: center;
   margin: 0 0 0.3em 0;
 }
+h3 {
+  text-align: center;
+  font-weight: 200;
+}
 h4 {
+  letter-spacing: 4px;
   text-align: center;
   margin: 1em 0;
-  color: white;
+  color: antiquewhite;
 }
 .card__img {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.card__img i {
+  margin-right: .3em;
 }
 .imageDetail {
   height: 16em;
@@ -116,7 +125,7 @@ h4 {
   margin: 0.7em auto;
   padding: 0.4em 1em;
   background-color: black;
-  color: white;
+  color: antiquewhite;
   max-width: 8em;
   border-radius: 8px;
 }
@@ -128,6 +137,10 @@ h4 {
 .card__link__p {
   margin-top: 1em;
 }
+.card__body {
+  max-width: 85vw;
+  margin: auto;
+}
 .card__link {
   text-decoration: none;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -138,17 +151,20 @@ h4 {
   margin: 0.7em auto;
   padding: 0.3em 0.8em;
   background-color: black;
-  color: white;
-  max-width: 8em;
+  color: antiquewhite;
+  max-width: 7em;
   border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .card__project::after {
-  content: '+ info';
+  content: '+';
   opacity: 0;
+  font-weight: 600;
   transition: 0.4s;
-  margin: 0 auto;
-  background-color: #61dbfb;
+  margin: auto;
+  color: #6c63ff;
   padding: 0.3em 0.8em;
   max-width: 8em;
   border-radius: 8px;
@@ -156,7 +172,7 @@ h4 {
 .share__message {
   position: absolute;
   top: 4em;
-  color: white;
+  color: antiquewhite;
   background-color: black;
   padding: 0.3em 0.8em;
   border-radius: 8px;
@@ -166,14 +182,13 @@ h4 {
 .opacity {
   opacity: 1;
 }
-
 @media (hover: none) {
   .projectCard .card__project::after,
   .projectCard .card__link {
     opacity: 1;
   }
   .projectCard {
-    border-inline: solid;
+    border-inline: solid 1px #6c63ff;
     border-radius: 12px;
   }
 }

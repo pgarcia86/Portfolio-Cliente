@@ -175,7 +175,7 @@ export default function ProjectDetail({
           )}
           <div className='cardDetail'>
             <div className='card__body'>
-              <h4>{project.title}</h4>
+              <h3>{project.title}</h3>
               <p>{project.description}</p>
               <p>{project.secDescription}</p>
             </div>
@@ -199,7 +199,7 @@ export default function ProjectDetail({
                 }
                 target='_blank'
               >
-                <i className={beat.bounce}></i> Repositorio
+                <i className={beat.bounce}></i> R e p o
               </Link>
             </div>
           </div>
