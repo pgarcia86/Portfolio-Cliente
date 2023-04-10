@@ -1,7 +1,7 @@
 body {
   background-color: #333070;
   background-image: url(https://res.cloudinary.com/dbld4vcec/image/upload/v1680017466/projects/alex-padurariu-tXYg4Zx7kSU-unsplash_pjlitu.jpg);
-  color: #d6f7dc;
+  color: antiquewhite;
   background-blend-mode: multiply;
   background-size: cover;
   min-height: 100vh;
@@ -10,6 +10,10 @@ body {
 }
 .alertImagen {
   height: 1.2em;
+}
+h2 {
+  font-size: 1.6em;
+  font-weight: 200;
 }
 .app {
   display: grid;
@@ -45,7 +49,7 @@ body {
   color: black;
 }
 .modal__btn {
-  background-color: white;
+  background-color: antiquewhite;
   border: none;
 }
 .tech__form {
@@ -57,7 +61,7 @@ body {
   margin-top: 1em;
 }
 .projectCard:hover {
-  border-inline: solid;
+  border-inline: solid 1px #6c63ff;
   border-radius: 12px;
 }
 .projectCard:hover .card__project::after,
@@ -90,7 +94,7 @@ body {
   .form__input {
     width: 28em;
   }
-/*   .button__style {
+  /*   .button__style {
     opacity: 1;
     height: 1.5em;
     max-width: 95vw;

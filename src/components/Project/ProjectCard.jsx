@@ -33,7 +33,7 @@ export default function ProjectCard({ project, handleClick, showDetail }) {
               onMouseLeave={() => setBounce("fa-brands fa-github fa-xl")}
               target="_blank"
             >
-              <i className={bounce}></i> Repositorio
+              <i className={bounce}></i> R e p o
             </Link>
           </p>
         </div>

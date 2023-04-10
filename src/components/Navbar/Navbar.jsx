@@ -1,5 +1,5 @@
-import { Link, useNavigate } from "react-router-dom";
-import "./Navbar.css";
+import { Link, useNavigate } from 'react-router-dom';
+import './Navbar.css';
 
 export default function Navbar({
   handleNewProject,
@@ -12,64 +12,65 @@ export default function Navbar({
 
   const handleAboutme = () => {
     setIsntHome(true);
-    navigate("/aboutme");
+    navigate('/aboutme');
   };
   const handleHome = () => {
     setIsntHome(false);
     setShowDetail(false);
-    setDetails("app");
+    setDetails('app');
     handleNewProject(false);
-    navigate("/");
+    navigate('/');
   };
 
   return (
-    <nav className="navbar navbar-dark navbar-expand-lg background">
-      <div className="container-fluid ">
+    <nav className='navbar navbar-dark navbar-expand-lg background'>
+      <div className='container-fluid '>
         <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+          className='navbar-toggler'
+          type='button'
+          data-bs-toggle='collapse'
+          data-bs-target='#navbarNav'
+          aria-controls='navbarNav'
+          aria-expanded='false'
+          aria-label='Toggle navigation'
         >
-          <span className="navbar-toggler-icon"></span>
+          <span className='navbar-toggler-icon'></span>
         </button>
         <div
-          className="collapse navbar-collapse navbar__display"
-          id="navbarNav"
+          className='collapse navbar-collapse navbar__display'
+          id='navbarNav'
         >
-          <ul className="navbar-nav">
-            <li className="nav-item">
-              <p onClick={handleAboutme} className="nav-link about__me">
-                About me
+          <ul className='navbar-nav'>
+            <li className='nav-item'>
+              <p onClick={handleAboutme} className='nav-link about__me'>
+                ABOUT ME
               </p>
             </li>
-            <li className="nav-item">
-              <p onClick={handleHome} className="nav-link about__me">
-                Home
+            <li className='nav-item'>
+              <p onClick={handleHome} className='nav-link about__me'>
+                HOME
               </p>
             </li>
-            <li className="nav-item">
+            <li className='nav-item'>
               <p
                 onClick={() => {
                   handleNewProject(!newProject);
                 }}
-                className="nav-link newProject"
+                className='nav-link newProject'
               >
-                New Project
+                NEW PROJECT
               </p>
             </li>
           </ul>
-          <ul className="navbar-nav linkedIn">
+          <ul className='navbar-nav linkedIn'>
             <li>
               <Link
-                to={"https://www.linkedin.com/in/eogimenez/"}
-                className="nav-link"
-                target="_blank"
+                to={'https://www.linkedin.com/in/eogimenez/'}
+                className='nav-link'
+                target='_blank'
               >
-                <i className="fa-brands fa-linkedin fa-xl"></i> LinkedIn
+                <i className='fa-brands fa-linkedin fa-xl'></i>{' '}
+                <span>LinkedIn</span>
               </Link>
             </li>
           </ul>
