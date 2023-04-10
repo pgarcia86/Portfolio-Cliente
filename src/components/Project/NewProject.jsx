@@ -176,7 +176,7 @@ export default function NewProject({
           Create new Project
         </button>
       </form>
-      <form className='tech__form' onSubmit={handleTech}>
+      <form className='form__input tech__form' onSubmit={handleTech}>
         <div className='form-floating mb-3'>
           <input
             type='text'

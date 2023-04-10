@@ -28,7 +28,7 @@
 }
 .cardDetail {
   max-width: 95vw;
-  margin: auto;
+  margin: 2em auto 0;
 }
 .cardDetail p {
   text-align: center;
@@ -171,7 +171,7 @@ h4 {
 }
 .share__message {
   position: absolute;
-  top: 4em;
+  top: 8em;
   color: antiquewhite;
   background-color: black;
   padding: 0.3em 0.8em;

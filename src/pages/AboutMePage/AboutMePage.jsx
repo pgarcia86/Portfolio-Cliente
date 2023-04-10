@@ -11,10 +11,10 @@ export default function AboutMePage({ handleIsntHome, isntHome, setIsntHome }) {
 
   return (
     <>
-        <div>
-          <h2>Eugenio Oscar Giménez</h2>
-          <h4>Web Developer</h4>
-        </div>
+      <div className='profile__title'>
+        <h2>Eugenio Oscar Giménez</h2>
+        <h4>Web Developer</h4>
+      </div>
       <div id='profile'>
         <div className='profile__me'>
           <p>

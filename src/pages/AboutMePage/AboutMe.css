@@ -5,6 +5,9 @@
   gap: 2em;
   color: white;
 }
+.profile__title {
+  margin-top: 3em;
+}
 .profile__me p {
   text-align: center;
   max-width: 30em;
@@ -85,6 +88,8 @@ h3 {
     flex-direction: row;
     gap: 0.8em;
     margin: 2em 2em;
+    max-width: 50em;
+    margin: auto;
   }
   .profile__me p {
     max-width: 40em;

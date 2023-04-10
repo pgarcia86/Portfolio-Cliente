@@ -77,8 +77,9 @@ h2 {
     grid-template-columns: repeat(2, 1fr);
   }
   #newProject {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     width: auto;
     padding: 2em;
     gap: 2em;

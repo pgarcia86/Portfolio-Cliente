@@ -183,7 +183,7 @@ export default function EditProject({
             Edit Project
           </button>
         </form>
-        <form className='tech__form' onSubmit={handleTech}>
+        <form className='form__input tech__form' onSubmit={handleTech}>
           {technologies.map((tech, i) => {
             return (
               <div key={i} className='form-floating mb-3'>

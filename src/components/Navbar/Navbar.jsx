@@ -26,6 +26,7 @@ export default function Navbar({
     <nav className='navbar navbar-dark navbar-expand-lg background'>
       <div className='container-fluid '>
         <button
+          id='navbar__togg'
           className='navbar-toggler'
           type='button'
           data-bs-toggle='collapse'
