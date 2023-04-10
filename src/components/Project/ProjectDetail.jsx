@@ -45,15 +45,16 @@ export default function ProjectDetail({
     projectService
       .deleteProject(project._id, { ownCode })
       .then((result) => {
-        if (result.data.messageError) {
-          setDeleteMessage(result.data.messageError);
-          return;
-        }
         setSomethingChange(!somethingChange);
         setModal(!modal);
         handleClick(!showDetail);
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        console.log(err);
+        if (err.response.data.messageError) {
+          setDeleteMessage(err.response.data.messageError);
+        }
+      });
   };
   return (
     <>
