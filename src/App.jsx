@@ -50,6 +50,17 @@ function App() {
         setShowDetail={setShowDetail}
         setDetails={setDetails}
       />
+      {!showDetail && !newProject && !isntHome && (
+        <div className='header'>
+          <h1>PORTFOLIO EUGENIO GIMÉNEZ</h1>
+          <h5>
+            Aquí podrás encontrar una lista de todos los proyectos en los que he
+            participado. En cada tarjeta, podrás ver las tecnologías utilizadas
+            en el proyecto, una breve descripción del mismo y un enlace al
+            correspondiente repositorio.
+          </h5>
+        </div>
+      )}
       {!isntHome && (
         <>
           <div>
