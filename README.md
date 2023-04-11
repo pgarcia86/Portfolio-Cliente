@@ -1,6 +1,6 @@
 # Portfolio - client side
 
-Aquí pueden encontrar el Front End para generar un portfolio, está hecho en ReactJS y es SPA
+Aquí pueden encontrar el Front End para generar un portfolio, tener en cuenta que es necesario crear la API.
 
 - repositorio del server: [Aquí](https://github.com/eoGimenez/portfolio-server)
 
