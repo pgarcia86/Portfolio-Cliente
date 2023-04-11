@@ -48,14 +48,13 @@ h5, h1 {
 .btn:hover {
   background-color: #f7d6dc;
 }
-
 .modal {
   color: black;
-}
+} 
 .modal__btn {
-  background-color: antiquewhite;
+  background-color: white;
   border: none;
-}
+} 
 .tech__form {
   display: flex;
   flex-direction: column;
@@ -76,11 +75,15 @@ h5, h1 {
   opacity: 0;
 }
 .header {
-  max-width: 16em;
+  max-width: 18em;
   display: flex;
   flex-direction: column;
   margin: 1em auto 0;
   gap: .5em
+}
+.header h1 {
+  max-width: 9em;
+  margin: auto;
 }
 
 @media (orientation:landscape) and (max-width: 48em)  {
@@ -88,8 +91,13 @@ h5, h1 {
     max-width: 28em;
   }
 }
+@media (min-width: 30em) {
+  .app {
+    grid-template-columns: 1fr;
+  }
+}
 
-@media (min-width: 60rem) {
+@media (min-width: 48rem) {
   .app {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -117,6 +125,10 @@ h5, h1 {
     margin: 2em auto 0;
     gap: 2em
   }
+  .header h1 {
+    max-width: 20em;
+  }
+
   /*   .button__style {
     opacity: 1;
     height: 1.5em;
@@ -131,10 +143,5 @@ h5, h1 {
   .app {
     grid-template-columns: repeat(3, 1fr);
     gap: 1em;
-  }
-}
-@media (min-width: 100rem) {
-  .app {
-    grid-template-columns: repeat(3, 1fr);
   }
 }
