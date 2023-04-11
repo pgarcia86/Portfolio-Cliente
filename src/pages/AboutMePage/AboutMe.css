@@ -93,6 +93,7 @@ h3 {
   }
   .profile__me p {
     max-width: 40em;
+    color: antiquewhite;
   }
   .profile__me {
     margin-left: 3em;
