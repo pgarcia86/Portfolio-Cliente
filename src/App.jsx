@@ -56,7 +56,7 @@ function App() {
             Aquí podrás encontrar una lista de todos los proyectos en los que he
             participado. En cada tarjeta, podrás ver las tecnologías utilizadas
             en el proyecto, una breve descripción del mismo y un enlace al
-            correspondiente repositorio.
+            repositorio correspondiente.
           </h5>
         </div>
       )}
