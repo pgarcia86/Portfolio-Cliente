@@ -18,32 +18,32 @@ export default function AboutMePage({ handleIsntHome, isntHome, setIsntHome }) {
       <div id='profile'>
         <div className='profile__me'>
           <p>
-            Mi nombre es Eugenio Giménez, soy Web Developer y de pequeño estudie
-            algunos lenguajes de programación como{' '}
-            <strong>C++, Delphi y pascal,</strong> luego estudie hostelería y
-            vine a vivir a Barcelona, durante los mas de 10 años de experiencia
-            en hostelería pude alimentar mis ganas constantes de aprender,
-            también pude llevar a la practica otra de mis pasiones que es
-            enseñar, como siempre estaba investigando y leyendo, era el idóneo
-            para formar a los practicantes o ayudantes, con el tiempo llegue a{' '}
-            <strong>liderar equipos</strong> y fue una gran experiencia,
-            trabajando en sitios como Martin Berasategui o en hoteles como Arts
-            o Hilton <strong>desarrolle un gran control del estrés</strong>, ya
-            que en equipos tan grandes dependes de tus compañeros y es difícil
-            gestionar la ansiedad o la frustración, pero lo pude superar y hoy
-            puedo decir que el estrés no afecta en la calidad de mi trabajo.
+            Mi nombre es Eugenio Giménez y soy un Desarrollador Web. Desde
+            joven, estudié algunos lenguajes de programación como{' '}
+            <strong>C++, Delphi y Pascal</strong>. Luego decidí estudiar
+            Hostelería y me mudé a Barcelona. Durante mis más de 10 años de
+            experiencia en Hostelería, pude seguir alimentando mi constante
+            deseo de aprender. Además, pude poner en práctica otra de mis
+            pasiones, que es enseñar. Siempre estaba investigando y leyendo, lo
+            que me permitió ser el candidato ideal para formar a los aprendices
+            o ayudantes. Con el tiempo, llegué a<strong>liderar equipos</strong>{' '}
+            y fue una gran experiencia. Trabajé en lugares como Martin
+            Berasategui, así como en hoteles como Arts o Hilton, donde
+            <strong>desarrollé un gran control del estrés.</strong> En equipos
+            tan grandes, dependes de tus compañeros y es difícil gestionar la
+            ansiedad o la frustración, pero pude superarlo y hoy puedo decir que
+            el estrés no afecta a la calidad de mi trabajo.
           </p>
           <p>
-            Lo cierto es que nunca deje de mirar el universo digital con muchas
-            ganas y como cocinar me encanta y lo voy a seguir haciendo en mi
-            casa, decidí dar el salto y apuntarme en
-            <strong>IronHack</strong>, quise que sea algo muy intenso porque
-            quería probarme a mi mismo y la verdad que después de tocar tantas
-            tecnologías como{' '}
-            <strong>ReactJS, ExpressJS, JavaScript, NodeJS</strong>
-            entre otras en un periodo tan corto no me arrepiento ya que aparte
-            aprendí a ser autosuficiente en la búsqueda de información, por es
-            hoy decido enfocarme al 100% en incorporarme al ecosistema digital.
+            Lo cierto es que nunca dejé de tener mucho interés en el universo
+            digital y, como me encanta cocinar y seguir haciéndolo en mi casa,
+            decidí dar el salto y apuntarme en <strong>IronHack</strong>. Quería
+            que fuera algo muy intenso porque quería probarme a mí mismo, y la
+            verdad es que después de familiarizarme con tecnologías como{' '}
+            <strong>ReactJS, ExpressJS, JavaScript, NodeJS</strong> y otras en
+            un período tan corto, no me arrepiento en absoluto. Además, aprendí
+            a ser autosuficiente en la búsqueda de información, por lo que ahora
+            estoy enfocado al 100% en incorporarme al ecosistema digital.
           </p>
         </div>
         <div className='img__div'>
