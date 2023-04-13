@@ -1,5 +1,5 @@
-import { createContext, useEffect, useState } from "react";
-import ProjectsService from "../services/projects.service";
+import { createContext, useEffect, useState } from 'react';
+import ProjectsService from '../services/projects.service';
 
 const projectsContext = createContext();
 

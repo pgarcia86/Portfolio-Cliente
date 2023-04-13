@@ -3,7 +3,6 @@ import './Navbar.css';
 
 export default function Navbar({
   handleNewProject,
-  newProject,
   setIsntHome,
   setShowDetail,
   setDetails,
@@ -52,16 +51,13 @@ export default function Navbar({
                 HOME
               </p>
             </li>
-            <li className='nav-item'>
+            {/*  <li className='nav-item'>
               <p
-                onClick={() => {
-                  handleNewProject(!newProject);
-                }}
                 className='nav-link newProject'
               >
                 NEW PROJECT
               </p>
-            </li>
+            </li> */}
           </ul>
           <ul className='navbar-nav linkedIn'>
             <li>

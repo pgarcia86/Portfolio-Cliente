@@ -49,7 +49,7 @@ h3 {
 
 .tech__logo {
   height: 4em;
-  margin:auto;
+  margin: auto;
 }
 
 #my__techs {
@@ -59,7 +59,7 @@ h3 {
   gap: 0.5em;
 }
 
-@media (orientation:landscape) and (max-width: 48em)  {
+@media (orientation: landscape) and (max-width: 48em) {
   .profile__me p {
     max-width: 34em;
     margin: auto;
@@ -84,7 +84,7 @@ h3 {
   .tech__logo {
     height: 5em;
     margin: 0 2em;
-    margin:auto;
+    margin: auto;
   }
   #my__techs {
     display: flex;
@@ -103,7 +103,7 @@ h3 {
   }
   .img__div {
     margin-right: 3em;
-    gap: 1em
+    gap: 1em;
   }
 }
 @media (min-width: 60em) {

@@ -119,7 +119,9 @@ export default function ProjectIdPage({
       )}
       {project && !isEdit && (
         <div className='projectDetail'>
-        <h4 className={'share__message ' + opacity}>Url copied to clipboard</h4>
+          <h4 className={'share__message ' + opacity}>
+            Url copied to clipboard
+          </h4>
           <div id='projectDetail'>
             <div className='iconos'>
               <div

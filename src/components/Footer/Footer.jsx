@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Footer.css';
 
-export default function Footer() {
+export default function Footer({ handleNewProject, newProject }) {
   const [bounce, setBounce] = useState('fa-brands fa-github fa-2xl');
 
   return (
@@ -11,7 +11,14 @@ export default function Footer() {
       onMouseEnter={() => setBounce('fa-brands fa-github fa-2xl fa-bounce')}
       onMouseLeave={() => setBounce('fa-brands fa-github fa-2xl')}
     >
-      <p id='eog'>eoGimenez</p>
+      <p
+        id='eog'
+        onClick={() => {
+          handleNewProject(!newProject);
+        }}
+      >
+        eoGimenez
+      </p>
       <Link
         className='link__github'
         to='https://github.com/eoGimenez'

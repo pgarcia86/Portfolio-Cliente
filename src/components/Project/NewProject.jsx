@@ -20,7 +20,7 @@ export default function NewProject({
   const [technologies, setTechnologies] = useState([]);
   const [image, setImage] = useState('');
   const [techAux, setTechAux] = useState('');
-
+  const [isOwner, setIsOwner] = useState(false)
   const projectService = new ProjectsService();
   const handleTech = (e) => {
     e.preventDefault();
@@ -75,7 +75,10 @@ export default function NewProject({
   };
 
   return (
-    <div id='newProject'>
+    {!isOwner && (<div>
+      
+    </div>)}
+    {isOwner && (<div id='newProject'>
       <form className='form__input' onSubmit={submitHandler}>
         <div
           className='alert alert-primary d-flex align-items-center'
@@ -192,6 +195,6 @@ export default function NewProject({
           Add Tech
         </button>
       </form>
-    </div>
+    </div>)}
   );
 }

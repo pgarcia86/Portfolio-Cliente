@@ -45,7 +45,6 @@ function App() {
     <>
       <Navbar
         handleNewProject={handleNewProject}
-        newProject={newProject}
         setIsntHome={setIsntHome}
         setShowDetail={setShowDetail}
         setDetails={setDetails}
@@ -122,7 +121,15 @@ function App() {
             />
           }
         />
-        <Route path={'/'} element={<Footer />} />
+        <Route
+          path={'/'}
+          element={
+            <Footer
+              handleNewProject={handleNewProject}
+              newProject={newProject}
+            />
+          }
+        />
       </Routes>
     </>
   );
