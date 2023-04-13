@@ -75,9 +75,9 @@ export default function NewProject({
   };
 
   return (
-    {!isOwner && (<div>
+    {!isOwner && <div>
       
-    </div>)}
+    </div>}
     {isOwner && (<div id='newProject'>
       <form className='form__input' onSubmit={submitHandler}>
         <div
