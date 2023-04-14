@@ -97,11 +97,11 @@ export default function AboutMePage({ handleIsntHome, isntHome, setIsntHome }) {
           src='https://res.cloudinary.com/dbld4vcec/image/upload/v1680623722/projects/mongo_l30dil.png'
           alt='MongoDB Logo'
         />
-        <img
+     {/*    <img
           className='tech__logo'
           src='https://res.cloudinary.com/dbld4vcec/image/upload/v1681410721/projects/python_da51lc.png'
           alt='Python Logo'
-        />
+        /> */}
       </div>
       <Footer />
     </>
