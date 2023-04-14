@@ -26,9 +26,9 @@ export default function AboutMePage({ handleIsntHome, isntHome, setIsntHome }) {
             deseo de aprender. Además, pude poner en práctica otra de mis
             pasiones, que es enseñar. Siempre estaba investigando y leyendo, lo
             que me permitió ser el candidato ideal para formar a los aprendices
-            o ayudantes. Con el tiempo, llegué a<strong>liderar equipos</strong>{' '}
+            o ayudantes. Con el tiempo, llegué a{' '}<strong>liderar equipos</strong>{' '}
             y fue una gran experiencia. Trabajé en lugares como Martin
-            Berasategui, así como en hoteles como Arts o Hilton, donde
+            Berasategui, así como en hoteles como Arts o Hilton, donde{' '}
             <strong>desarrollé un gran control del estrés.</strong> En equipos
             tan grandes, dependes de tus compañeros y es difícil gestionar la
             ansiedad o la frustración, pero pude superarlo y hoy puedo decir que
@@ -95,7 +95,12 @@ export default function AboutMePage({ handleIsntHome, isntHome, setIsntHome }) {
         <img
           className='tech__logo'
           src='https://res.cloudinary.com/dbld4vcec/image/upload/v1680623722/projects/mongo_l30dil.png'
-          alt='HTML Logo'
+          alt='MongoDB Logo'
+        />
+        <img
+          className='tech__logo'
+          src='https://res.cloudinary.com/dbld4vcec/image/upload/v1681410721/projects/python_da51lc.png'
+          alt='Python Logo'
         />
       </div>
       <Footer />
