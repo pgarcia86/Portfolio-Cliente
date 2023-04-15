@@ -103,6 +103,11 @@ export default function AboutMePage({ handleIsntHome, isntHome, setIsntHome }) {
           src='https://res.cloudinary.com/dbld4vcec/image/upload/v1681410721/projects/python_da51lc.png'
           alt='Python Logo'
         />
+        <img
+          className='tech__logo'
+          src='https://res.cloudinary.com/dbld4vcec/image/upload/v1681580489/projects/django_ffi2sm.png'
+          alt='Django Logo'
+        />
       </div>
       <Footer />
     </>
