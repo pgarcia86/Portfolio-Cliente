@@ -55,7 +55,7 @@ export default function AboutMePage({ handleIsntHome, isntHome, setIsntHome }) {
           />
           <Link
             className='link__cv'
-            to='https://drive.google.com/file/d/1sMtMvsZ35hsewC-AZWhvq7L1BRmuWAQl/view?usp=sharing'
+            to='https://drive.google.com/file/d/1tReB_70xy6LocnTi6g-wbNBllqNT1lhj/view?usp=sharing'
             target='_blank'
           >
             <p>My CV</p>
