@@ -26,9 +26,9 @@ export default function ProjectDetail({
   });
   const projectService = new ProjectsService();
 
-  const handleModal = () => {
+  /*   const handleModal = () => {
     setModal(true);
-  };
+  }; */
   const handleShare = () => {
     setOpacity('opacity');
     setTimeout(() => {
@@ -108,7 +108,7 @@ export default function ProjectDetail({
       <h4 className={'share__message ' + opacity}>Url copied to clipboard</h4>
       {!isEdit && (
         <div id='projectDetail'>
-          <div className='iconos'>
+          {/* <div className='iconos'>
             <div
               className='eachIcon'
               onMouseEnter={() => setBeat({ ...beat, back: ' fa-beat-fade' })}
@@ -121,7 +121,7 @@ export default function ProjectDetail({
                 className={'fa-solid fa-arrow-left-long fa-xl' + beat.back}
               ></i>
             </div>
-            <div
+                         <div
               className='eachIcon'
               onMouseEnter={() => setBeat({ ...beat, share: ' fa-beat-fade' })}
               onMouseLeave={() => setBeat({ ...beat, share: ' ' })}
@@ -136,8 +136,8 @@ export default function ProjectDetail({
                   }
                 ></i>
               </CopyToClipboard>
-            </div>
-            <div
+            </div> 
+               <div
               className='eachIcon'
               onMouseEnter={() => setBeat({ ...beat, edit: ' fa-beat-fade' })}
               onMouseLeave={() => setBeat({ ...beat, edit: ' ' })}
@@ -154,8 +154,8 @@ export default function ProjectDetail({
               onClick={handleModal}
             >
               <i className={'fa-solid fa-trash-can fa-xl' + beat.delete}></i>
-            </div>
-          </div>
+            </div> 
+          </div> */}
           {deleteMessage && (
             <div
               className='alert alert-primary d-flex align-items-center code__error'
@@ -201,6 +201,26 @@ export default function ProjectDetail({
               >
                 <i className={beat.bounce}></i> R e p o
               </Link>
+              <div
+                className='eachIcon'
+                onMouseEnter={() =>
+                  setBeat({ ...beat, share: ' fa-beat-fade' })
+                }
+                onMouseLeave={() => setBeat({ ...beat, share: ' ' })}
+                onClick={handleShare}
+              >
+                <CopyToClipboard
+                  text={
+                    'https://portfolio-eogimenez.netlify.app/' + project._id
+                  }
+                >
+                  <i
+                    className={
+                      'fa-regular fa-share-from-square fa-xl' + beat.share
+                    }
+                  ></i>
+                </CopyToClipboard>
+              </div>
             </div>
           </div>
 
