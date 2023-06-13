@@ -12,13 +12,13 @@ export default function AboutMePage({ handleIsntHome, isntHome, setIsntHome }) {
   return (
     <>
       <div className='profile__title'>
-        <h2>Eugenio Oscar Giménez</h2>
-        <h4>Web Developer</h4>
+        <h2>Pablo Nicolás García Barros</h2>
+        <h4>Junior Java Developer</h4>
       </div>
       <div id='profile'>
         <div className='profile__me'>
           <p>
-            Mi nombre es Eugenio Giménez y soy un Desarrollador Web. Desde
+            Mi nombre es Pablo García Barros y soy un Desarrollador Web. Desde
             joven, estudié algunos lenguajes de programación como{' '}
             <strong>C++, Delphi y Pascal</strong>. Luego decidí estudiar
             Hostelería y me mudé a Barcelona. Durante mis más de 10 años de
