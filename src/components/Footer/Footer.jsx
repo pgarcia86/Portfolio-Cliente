@@ -17,11 +17,11 @@ export default function Footer({ handleNewProject, newProject }) {
           handleNewProject(!newProject);
         }}
       >
-        eoGimenez
+        Pablo García Barros
       </p>
       <Link
         className='link__github'
-        to='https://github.com/eoGimenez'
+        to='https://github.com/pgarcia86'
         target='_blank'
       >
         <i className={bounce}></i>

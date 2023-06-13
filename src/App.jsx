@@ -51,12 +51,11 @@ function App() {
       />
       {!showDetail && !newProject && !isntHome && (
         <div className='header'>
-          <h1>PORTFOLIO EUGENIO GIMÉNEZ</h1>
+          <h1>PORTFOLIO PABLO NICOLAS GARCIA BARROS</h1>
           <h5>
-            Aquí podrás encontrar una lista de todos los proyectos en los que he
-            participado. En cada tarjeta, podrás ver las tecnologías utilizadas
-            en el proyecto, una breve descripción del mismo y un enlace al
-            repositorio correspondiente.
+            Aquí encontrarás una lista de los proyectos que he realizado durante mis estudios. 
+            Centrados en la utilización de Java y Spring Boot Framework realizando persistencia
+            de datos tanto en MySQL y en MongoDB.
           </h5>
         </div>
       )}

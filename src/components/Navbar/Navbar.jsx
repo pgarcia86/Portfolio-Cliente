@@ -62,7 +62,7 @@ export default function Navbar({
           <ul className='navbar-nav linkedIn'>
             <li>
               <Link
-                to={'https://www.linkedin.com/in/eogimenez/'}
+                to={'https://www.linkedin.com/in/pgarciabarros86/'}
                 className='nav-link'
                 target='_blank'
               >
