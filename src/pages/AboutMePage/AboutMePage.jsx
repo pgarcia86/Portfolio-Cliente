@@ -18,10 +18,10 @@ export default function AboutMePage({ handleIsntHome, isntHome, setIsntHome }) {
       <div id='profile'>
         <div className='profile__me'>
           <p>
-            Mi nombre es Pablo García Barros y soy un Desarrollador Web. Desde
+            Mi nombre es Pablo García Barros y soy un Programador Junior Java. Desde
             joven, estudié algunos lenguajes de programación como{' '}
             <strong>C++, Delphi y Pascal</strong>. Luego decidí estudiar
-            Hostelería y me mudé a Barcelona. Durante mis más de 10 años de
+            wachirimpolla y me mudé a Barcelona. Durante mis más de 10 años de
             experiencia en Hostelería, pude seguir alimentando mi constante
             deseo de aprender. Además, pude poner en práctica otra de mis
             pasiones, que es enseñar. Siempre estaba investigando y leyendo, lo
@@ -49,9 +49,12 @@ export default function AboutMePage({ handleIsntHome, isntHome, setIsntHome }) {
         </div>
         <div className='img__div'>
           <img
-            className='img__me'
-            src='https://res.cloudinary.com/dbld4vcec/image/upload/v1680779992/projects/eugenioPortfolio_k13tul.jpg'
-            alt='Profile image of Eugenio Giménez'
+                      className='img__me'
+            /*
+                  src='https://res.cloudinary.com/dbld4vcec/image/upload/v1680779992/projects/eugenioPortfolio_k13tul.jpg'
+            */
+            src='https://res.cloudinary.com/dnicdtxe7/image/upload/ar_1:1,b_rgb:262c35,bo_0px_solid_rgb:ff0000,c_fill,g_auto,r_max,w_1000/v1687805612/PabloGarciaBarros.jpg'
+            alt='Profile image of Pablo Garcia Barros'
           />
           <Link
             className='link__cv'

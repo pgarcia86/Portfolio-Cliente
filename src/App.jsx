@@ -53,9 +53,8 @@ function App() {
         <div className='header'>
           <h1>PORTFOLIO PABLO NICOLAS GARCIA BARROS</h1>
           <h5>
-            Aquí encontrarás una lista de los proyectos que he realizado durante mis estudios. 
-            Centrados en la utilización de Java y Spring Boot Framework realizando persistencia
-            de datos tanto en MySQL y en MongoDB.
+            Aquí encontrarás un listado de los proyectos que he realizado durante mis estudios en IT Academy, Barcelona Activa. 
+            Utilizando tecnologias Java y Spring Boot Framework he desarrollado API's Rest con persistencia en MySQL y MongoDB.
           </h5>
         </div>
       )}
