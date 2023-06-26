@@ -49,10 +49,7 @@ export default function AboutMePage({ handleIsntHome, isntHome, setIsntHome }) {
         </div>
         <div className='img__div'>
           <img
-                      className='img__me'
-            /*
-                  src='https://res.cloudinary.com/dbld4vcec/image/upload/v1680779992/projects/eugenioPortfolio_k13tul.jpg'
-            */
+            className='img__me'
             src='https://res.cloudinary.com/dnicdtxe7/image/upload/ar_1:1,b_rgb:262c35,bo_0px_solid_rgb:ff0000,c_fill,g_auto,r_max,w_1000/v1687805612/PabloGarciaBarros.jpg'
             alt='Profile image of Pablo Garcia Barros'
           />
@@ -64,8 +61,9 @@ export default function AboutMePage({ handleIsntHome, isntHome, setIsntHome }) {
             <p>My CV</p>
           </Link>
         </div>
-          </div>
-      /*
+      </div>
+
+/*
       <div id='my__techs'>
         <img
           className='tech__logo'
@@ -112,8 +110,10 @@ export default function AboutMePage({ handleIsntHome, isntHome, setIsntHome }) {
           src='https://res.cloudinary.com/dbld4vcec/image/upload/v1681580489/projects/django_ffi2sm.png'
           alt='Django Logo'
         />
-          </div>
-      */
+      </div>
+*/
+
+
       <Footer />
     </>
   );
