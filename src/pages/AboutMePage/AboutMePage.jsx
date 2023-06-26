@@ -58,13 +58,14 @@ export default function AboutMePage({ handleIsntHome, isntHome, setIsntHome }) {
           />
           <Link
             className='link__cv'
-            to='https://drive.google.com/file/d/1tTCVzxgUsEMN4EIkMvtSrAdNZ2vAXoCJ/view?usp=share_link'
+            to='https://drive.google.com/file/d/1gDCknKO4QPms5le8hOtYrQscXBiHFJF0/view?usp=sharing'
             target='_blank'
           >
             <p>My CV</p>
           </Link>
         </div>
-      </div>
+          </div>
+      /*
       <div id='my__techs'>
         <img
           className='tech__logo'
@@ -111,7 +112,8 @@ export default function AboutMePage({ handleIsntHome, isntHome, setIsntHome }) {
           src='https://res.cloudinary.com/dbld4vcec/image/upload/v1681580489/projects/django_ffi2sm.png'
           alt='Django Logo'
         />
-      </div>
+          </div>
+      */
       <Footer />
     </>
   );
