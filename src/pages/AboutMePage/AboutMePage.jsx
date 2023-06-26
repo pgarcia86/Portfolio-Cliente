@@ -50,7 +50,7 @@ export default function AboutMePage({ handleIsntHome, isntHome, setIsntHome }) {
         <div className='img__div'>
           <img
             className='img__me'
-            src='https://res.cloudinary.com/dnicdtxe7/image/upload/v1687805612/PabloGarciaBarros.jpg'
+                      src='https://res.cloudinary.com/dnicdtxe7/image/upload/ar_1:1,b_rgb:262c35,bo_0px_solid_rgb:000000,c_fill,g_auto,r_max,w_1000/v1687805612/PabloGarciaBarros.jpg'
             alt='Profile image of Pablo Garcia Barros'
           />
           <Link
@@ -65,7 +65,7 @@ export default function AboutMePage({ handleIsntHome, isntHome, setIsntHome }) {
       <div id='my__techs'>
         <img
           className='tech__logo'
-          src='https://res.cloudinary.com/dnicdtxe7/image/upload/v1687809165/LogoJava_ofb91f.png'
+          src='https://res.cloudinary.com/dnicdtxe7/image/upload/c_scale,w_338/v1687809165/LogoJava_ofb91f.png'
           alt='Java Logo'
         />
         <img
