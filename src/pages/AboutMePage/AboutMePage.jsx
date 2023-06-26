@@ -65,7 +65,7 @@ export default function AboutMePage({ handleIsntHome, isntHome, setIsntHome }) {
       <div id='my__techs'>
         <img
           className='tech__logo'
-                  src='https://res.cloudinary.com/dnicdtxe7/image/upload/v1687812078/LogoJava_qwinn6.png'
+                  src='https://res.cloudinary.com/dnicdtxe7/image/upload/v1687812485/LogoJava3_kcndxv.png'
           alt='Java Logo'
         />
         <img
