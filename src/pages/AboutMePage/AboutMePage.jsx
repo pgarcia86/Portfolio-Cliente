@@ -50,7 +50,7 @@ export default function AboutMePage({ handleIsntHome, isntHome, setIsntHome }) {
         <div className='img__div'>
           <img
             className='img__me'
-            src='https://res.cloudinary.com/dnicdtxe7/image/upload/ar_1:1,b_rgb:262c35,bo_0px_solid_rgb:ff0000,c_fill,g_auto,r_max,w_1000/v1687805612/PabloGarciaBarros.jpg'
+            src='https://res.cloudinary.com/dnicdtxe7/image/upload/v1687805612/PabloGarciaBarros.jpg'
             alt='Profile image of Pablo Garcia Barros'
           />
           <Link
@@ -62,38 +62,16 @@ export default function AboutMePage({ handleIsntHome, isntHome, setIsntHome }) {
           </Link>
         </div>
       </div>
-
-/*
       <div id='my__techs'>
         <img
           className='tech__logo'
-          src='https://res.cloudinary.com/dbld4vcec/image/upload/v1680621812/projects/javascript_swgid3.png'
-          alt='JavaScript Logo'
+          src='https://res.cloudinary.com/dnicdtxe7/image/upload/v1687809165/LogoJava_ofb91f.png'
+          alt='Java Logo'
         />
         <img
           className='tech__logo'
-          src='https://res.cloudinary.com/dbld4vcec/image/upload/v1680622244/projects/nodeJS_kyl4vt.png'
-          alt='NodeJS Logo'
-        />
-        <img
-          className='tech__logo'
-          src='https://res.cloudinary.com/dbld4vcec/image/upload/v1680622371/projects/expressJS_rv4kpr.png'
-          alt='ExpressJS Logo'
-        />
-        <img
-          className='tech__logo'
-          src='https://res.cloudinary.com/dbld4vcec/image/upload/v1680622660/projects/ReactJS_e2qdv9.png'
-          alt='ReactJS Logo'
-        />
-        <img
-          className='tech__logo'
-          src='https://res.cloudinary.com/dbld4vcec/image/upload/v1680622960/projects/css_pvrila.png'
-          alt='CSS Logo'
-        />
-        <img
-          className='tech__logo'
-          src='https://res.cloudinary.com/dbld4vcec/image/upload/v1680623478/projects/html2_r2mwed.png'
-          alt='HTML Logo'
+          src='https://res.cloudinary.com/dnicdtxe7/image/upload/v1687809597/LogoSpring_z57hnt.png'
+          alt='Spring Logo'
         />
         <img
           className='tech__logo'
@@ -102,18 +80,10 @@ export default function AboutMePage({ handleIsntHome, isntHome, setIsntHome }) {
         />
         <img
           className='tech__logo'
-          src='https://res.cloudinary.com/dbld4vcec/image/upload/v1681410721/projects/python_da51lc.png'
-          alt='Python Logo'
-        />
-        <img
-          className='tech__logo'
-          src='https://res.cloudinary.com/dbld4vcec/image/upload/v1681580489/projects/django_ffi2sm.png'
-          alt='Django Logo'
+          src='https://res.cloudinary.com/dnicdtxe7/image/upload/v1687809845/LogoMySQL_jxxmcn.png'
+          alt='MySQL Logo'
         />
       </div>
-*/
-
-
       <Footer />
     </>
   );
