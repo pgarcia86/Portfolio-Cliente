@@ -146,7 +146,7 @@ export default function ProjectIdPage({
               >
                 <CopyToClipboard
                   text={
-                    'https://portfolio-eogimenez.netlify.app/' + project._id
+                    'https://portfolio-pablogb.netlify.app/' + project._id
                   }
                 >
                   <i

@@ -18,33 +18,24 @@ export default function AboutMePage({ handleIsntHome, isntHome, setIsntHome }) {
       <div id='profile'>
         <div className='profile__me'>
           <p>
-            Mi nombre es Pablo García Barros y soy un Programador Junior Java. Desde
-            joven, estudié algunos lenguajes de programación como{' '}
-            <strong>C++, Delphi y Pascal</strong>. Luego decidí estudiar
-            wachirimpolla y me mudé a Barcelona. Durante mis más de 10 años de
-            experiencia en Hostelería, pude seguir alimentando mi constante
-            deseo de aprender. Además, pude poner en práctica otra de mis
-            pasiones, que es enseñar. Siempre estaba investigando y leyendo, lo
-            que me permitió ser el candidato ideal para formar a los aprendices
-            o ayudantes. Con el tiempo, llegué a{' '}
-            <strong>liderar equipos</strong> y fue una gran experiencia. Trabajé
-            en lugares como Martin Berasategui, así como en hoteles como Arts o
-            Hilton, donde{' '}
-            <strong>desarrollé un gran control del estrés.</strong> En equipos
-            tan grandes, dependes de tus compañeros y es difícil gestionar la
-            ansiedad o la frustración, pero pude superarlo y hoy puedo decir que
-            el estrés no afecta a la calidad de mi trabajo.
+            Mi nombre es Pablo García Barros y soy Programador Junior Java. Desde
+            joven me interesé en la tecnología. Estudié electrónica en el instituto
+            y comencé a programar en {' '}<strong>C y C++</strong> durante los años 
+            que cursé en la facultad{' '}. Luego decidí estudiar
+            restauración y me recibí de Profesional Gastronómico. Durante más de 
+            10 años de experiencia en Hostelería, trabajé como camarero y con el 
+            tiempo, tuve la oportunidad de <strong>liderar equipos</strong>, 
+            capacitar ayudantes y contratar nuevos.
           </p>
           <p>
-            Lo cierto es que nunca dejé de tener mucho interés en el universo
-            digital y, como me encanta cocinar y seguir haciéndolo en mi casa,
-            decidí dar el salto y apuntarme en <strong>IronHack</strong>. Quería
-            que fuera algo muy intenso porque quería probarme a mí mismo, y la
-            verdad es que después de familiarizarme con tecnologías como{' '}
-            <strong>ReactJS, ExpressJS, JavaScript, NodeJS</strong> y otras en
-            un período tan corto, no me arrepiento en absoluto. Además, aprendí
-            a ser autosuficiente en la búsqueda de información, por lo que ahora
-            estoy enfocado al 100% en incorporarme al ecosistema digital.
+            Siempre seguí interesado en el mundo IT y finalmente decidí dar el
+            salto y me apunté en <strong>ITAcademy - Barcelona Activa</strong>
+            e hice la formacion en <strong>Java Back-End con Spring Boot 
+            Framework</strong>. Aprendí a hacer <strong>API REST</strong> con
+            persistencia en <strong>MySQL y MongoDB</strong>, a inversigar y
+            a ser perseverante.
+            Me siento capacitado para incorporarme a un entorno dinámico y 
+            profesional donde pueda aprender y crecer en el mundo IT.
           </p>
         </div>
         <div className='img__div'>

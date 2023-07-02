@@ -128,7 +128,7 @@ export default function ProjectDetail({
               onClick={handleShare}
             >
               <CopyToClipboard
-                text={'https://portfolio-eogimenez.netlify.app/' + project._id}
+                text={'https://portfolio-pablogb.netlify.app/' + project._id}
               >
                 <i
                   className={
